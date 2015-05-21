@@ -20,7 +20,7 @@
  * Setting-up global variables.
  */
 var sidePanel = '.wr-side-panel',
-    navHeight = $('#nav').height(),
+    navHeight = $('nav.navbar').height(),
     headerHeight = $('header').height(),
     offset = (headerHeight + navHeight),
     toggleButton = 'a.wr-side-panel-toggle-btn';
@@ -30,7 +30,7 @@ var sidePanel = '.wr-side-panel',
  */
 $(window).load(function(){
     setSidePanelHeight();
-    $(sidePanel).css('top' , offset);
+    $(sidePanel).css('top', offset);
     sidePanelPositionFix();
 });
 
@@ -73,16 +73,32 @@ function sidePanelPositionFix(){
     }
     else {
         $(sidePanel).css('position','absolute');
-        $(sidePanel).css('top' , offset);
+        $(sidePanel).css('top', offset);
     }
 }
 
 /*
  * Notification panel slide toggle
+ * @param view: which should be visible on side panel open
+ * @param button: selected button
  */
-function toggleSidePanel(){
-    $(sidePanel).toggleClass('toggled');
-    $(toggleButton).toggleClass('selected');
+function toggleSidePanel(view,button){
+    
+    var viewElement = (sidePanel + ' #' + view);
+    
+    $(viewElement).siblings().hide();
+    $(viewElement).show();
+    
+    $(button).siblings().removeClass('selected');
+    $(button).toggleClass('selected');
+    
+    if($(button).hasClass('selected')){
+        $(sidePanel).addClass('toggled');
+    }
+    else {
+        $(sidePanel).removeClass('toggled');
+    }
+
 }
 
 /*
