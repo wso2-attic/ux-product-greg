@@ -265,19 +265,6 @@ a.ctrl-filter-category:hover {
 
 /* testing */
 
-/*GROW*/
-.ast-img img {
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
- 
-.ast-img img:hover {
-  width: 150px;
-  height: 150px;
-}
 @media all and (min-width: 992px) {
     .custom-form-label{
         text-align: right;

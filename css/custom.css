@@ -188,6 +188,10 @@ a.collapsing-h2{
     text-decoration: none;
 }
 
+a.collapsing-h2 .fw-stack {
+    font-size: 18px;
+}
+
 h2.app-title {
     font-weight:500;
     font-size:17px;
@@ -229,7 +233,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index:10;
+    z-index:1000000;
 }
 
 .wr-asset-type-switcher {
@@ -356,7 +360,6 @@ a.ast-type-item:hover {
 }
 
 .itm-ast {
-	background:#fff;
 	display:block;
 	cursor: pointer;
 	padding:0;
@@ -370,7 +373,7 @@ a.ast-type-item:hover {
 }
 
 .itm-ast:hover h3, .itm-ast:hover .ast-auth, a:hover, a:focus {
-	color:#007d85;
+	color: #007d85;
     text-decoration: none;
 }
 
@@ -378,23 +381,108 @@ br.c-both {
 	clear:both;
 }
 
-.ast-img img {
-	float:left;
-	width:140px;
-	height:140px;
+.ctrl-wr-asset .itm-ast .ast-img {
+    display: block;
+    position: relative;
+    width: 140px;
+	height: 140px;
+}
+
+.ctrl-wr-asset .itm-ast .ast-img img {
+    width: 100%;
+    height: auto;
+}
+
+.ctrl-wr-asset .itm-ast .ast-img {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.ctrl-wr-asset .itm-ast .ast-img:hover {
+    width: 150px;
+    height: 150px;
+}
+
+.ctrl-wr-asset.selected .itm-ast .ast-img {
+    border: 5px solid #007d85;
+}
+
+.ctrl-wr-asset.selected .itm-ast .ast-img:after, .ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:after {
+    position: absolute;
+    display: block;
+    border-top: 28px solid #007d85;
+    border-left: 28px solid transparent;
+    right: 0;
+    content: "";
+    top: 0;
+    z-index: 101;
+}
+
+.ctrl-wr-asset.selected .itm-ast .ast-img:before, .ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: transparent;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    height: .65rem;
+    width: 1.3rem;
+    right: 0;
+    top: 0;
+    z-index: 102;
+    -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:after {
+    border-top-width: 32px;
+    border-left-width: 32px;
+}
+
+.ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:before {
+    right: 0.3rem;
+    top: 0.3rem;
+}
+
+.ctrl-wr-asset-list .ctrl-wr-asset {
+    width: 100px;
+    height: 200px;
+    margin-right: 12px;
+}
+
+.ctrl-wr-asset-list .ctrl-wr-asset .itm-ast {
+    height: inherit;
+}
+
+.ctrl-wr-asset-list .ctrl-wr-asset .itm-ast .ast-img {
+    width: 100px;
+	height: 100px;
+}
+
+.ctrl-wr-asset-list .ctrl-wr-asset .itm-ast .ast-desc {
+    width: 100px;
+}
+
+.ctrl-wr-asset-list .ctrl-wr-asset .ast-name {
+    margin-bottom: 0;
+    font-size: 16px;
+    height: 18px;
 }
 
 .ast-desc {
-	float:left;
-	margin-left:0px;
-	overflow:hidden;
-    width:140px;
+	float: left;
+	margin-left: 0px;
+	overflow: hidden;
+    width: 140px;
 }
 
 h3.ast-name {
-	font-weight:300;
-	font-size:20px;
-	color:#555;
+	font-weight: 300;
+	font-size: 20px;
+	color: #555;
 	margin-top:12px;
 	margin-bottom:12px;
     display: block;
