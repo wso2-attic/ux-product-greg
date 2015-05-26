@@ -6,6 +6,8 @@ html {
 	min-height: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -529,12 +531,68 @@ h2.sub-heading {
 .more-toggle-wrapper {
 	max-height: 300px;
 	overflow: hidden;
+    
+    -webkit-transition: max-height 1s ease;
+    -moz-transition: max-height 1s ease;
+      -o-transition: max-height 10.5s ease;
+     -ms-transition: max-height 1s ease;
+         transition: max-height 1s ease;
 }
 
 .more-toggle-wrapper.expand {
-    max-height: none;
+    max-height: 5000px;
 }
 
 .more-toggle-btn {
     cursor: pointer;
+}
+
+.nav-tabs>li {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.nav-tabs>li i.fw {
+    margin-right: 10px;
+}
+
+.nav-tabs {
+    background: transparent;
+    border: none;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    border: none;
+    background: #2c313b;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 0;
+}
+
+.nav-tabs>li>a {
+    border-radius: 0;
+    border: none;
+    margin-right: 0;
+    background: #eee;
+    color: #2c313b;
+    padding: 8px 15px;
+    margin-top: 3px;
+}
+
+.tab-content {
+    padding: 20px;
+    background: #2c313b;
+}
+
+.tab-content h3.ast-name {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.tab-content .ast-ver {
+    color: #eee;
+}
+
+.tab-content h3.ast-name:after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(44, 49, 59, 1) 50%);
 }

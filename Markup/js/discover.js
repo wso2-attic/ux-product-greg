@@ -9,3 +9,7 @@ $('.more-toggle-btn').click(function(){
         }
     });
 });
+
+$('.ctrl-wr-asset').click(function(){
+    $(this).toggleClass('selected');
+});
