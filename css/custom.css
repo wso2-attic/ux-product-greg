@@ -354,7 +354,7 @@ a.ast-type-item:hover {
 
 .ctrl-wr-asset {
 	width:140px;
-	height:300px;
+	height:250px;
 	float:left;
 	margin-right:22px;
 }
@@ -366,7 +366,7 @@ a.ast-type-item:hover {
 	margin-bottom:0px;
 	width:100%;
 	border:0px solid #ff0000;
-	height:300px;
+	height:250px;
 }
 
 .itm-ast:hover {
