@@ -61,13 +61,13 @@
                     <h1>WeatherGMX.wsdl</h1>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                    <a href="code.html">
+                    <a href="code.html" class="active">
                         <span class="fw-stack">
                             <i class="fw fw-ring fw-stack-2x"></i>
                             <i class="fw fw-circle fw-stack-1x"></i>
                         </span>
                         Code View
-                    </a><a href="diff.html" class="active">
+                    </a><a href="diff.html">
                         <span class="fw-stack">
                             <i class="fw fw-ring fw-stack-2x"></i>
                             <i class="fw fw-circle fw-stack-1x"></i>
@@ -77,49 +77,20 @@
                 </div>
             </div> 
             <div class="row no-gutter">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 view-panel list">
-                    <ul>
-                        <li class="added selected"><a href="#">Added</a></li>
-                        <li class="added"><a href="#">Added</a></li>
-                        <li class="changed"><a href="#">Changed</a></li>
-                        <li class="removed"><a href="#">Removed</a></li>
-                        <li class="added"><a href="#">Added</a></li>
-                        <li class="changed"><a href="#">Changed</a></li>
-                        <li class="removed"><a href="#">Removed</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 view-panel">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 view-panel">
          
                     <div id="diffView" class="code-container"></div>
 
                     <script>
-                        var value, orig1, orig2, dv, panes = 2, highlight = true, connect = null, collapse = false;
-                        function initUI() {
-                          if (value == null) return;
-                          var target = document.getElementById("diffView");
-                          target.innerHTML = "";
-                          dv = CodeMirror.MergeView(target, {
-                            value: value,
-                            origLeft: panes == 3 ? orig1 : null,
-                            orig: orig2,
+                        var target = document.getElementById("diffView");
+                            target.innerHTML = "";
+                        
+                        var myCodeMirror = CodeMirror(target, {
+                            value: document.documentElement.innerHTML,
                             lineNumbers: true,
                             mode: "text/html",
-                            highlightDifferences: highlight,
-                            connect: connect,
-                            collapseIdentical: collapse,
                             theme: "ambiance"
-                          });
-                        }
-
-                        window.onload = function() {
-                          value = document.documentElement.innerHTML;
-                          orig1 = "<!doctype html>\n\n" + value.replace(/\.\.\//g, "codemirror/").replace("yellow", "orange");
-                          orig2 = value.replace(/\u003cscript/g, "\u003cscript type=text/javascript ")
-                            .replace("white", "purple;\n      font: comic sans;\n      text-decoration: underline;\n      height: 15em");
-                          initUI();
-                        };
-                        
-                        editor.refresh();
+                        });
                         
                     </script>
 
