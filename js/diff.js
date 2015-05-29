@@ -55,5 +55,21 @@ function setViewPanelsHeight(){
     else{
         $(viewPanel).css('height', 'auto');
     }
-    $('.CodeMirror-merge, .CodeMirror-merge .CodeMirror').height(($(viewPanel).height()-60));
+    $('.CodeMirror, .CodeMirror-merge').height(($(viewPanel).height()-60));
+    
+    /* Fix for code mirror diff view panels width unbalance issue */
+    var CodeMirrorSizerMinWidth = '500px';
+    $('.CodeMirror-sizer').each(function(){
+        if($(this).css('min-width') < CodeMirrorSizerMinWidth){
+            CodeMirrorSizerMinWidth = $(this).css('min-width');
+        }
+    });  
+    $('.CodeMirror-sizer').css('min-width', CodeMirrorSizerMinWidth);
+    $('.CodeMirror-vscrollbar').scrollTop(2);
+    
+    /* Fix for code mirror scrollbar not shows on window load */
+    if($('.CodeMirror').height() < $('.CodeMirror-code').height()){
+        $('.CodeMirror-vscrollbar').show();
+        $('.CodeMirror-vscrollbar > div').height($('.CodeMirror-sizer').height());
+    }
 }
