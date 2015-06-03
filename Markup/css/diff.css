@@ -261,19 +261,27 @@ body {
 }
 
 .CodeMirror-merge-r-chunk-end, .CodeMirror-merge-r-chunk-start, .CodeMirror-merge-r-chunk {
-    border-top-color: #161616;
+    /*border-top-color: #161616;*/
+    border-top-color: #9C2C36;
 }
 
 .CodeMirror-merge-r-chunk-end, .CodeMirror-merge-r-chunk-start, .CodeMirror-merge-r-chunk {
-    border-bottom-color: #161616;
+    /*border-bottom-color: #161616;*/
+    border-bottom-color: #9C2C36;
 }
 
 .CodeMirror-merge-r-chunk {
-    background-color: #161616;
+    /*background-color: #161616;*/
+    background-color: #9C2C36;
+}
+
+.cm-s-ambiance .cm-comment {
+    color: #757575;
 }
 
 .CodeMirror-merge-r-connect {
-    fill: #161616;
+    /*fill: #161616;*/
+    fill: #9C2C36;
     stroke: transparent;
 }
 
