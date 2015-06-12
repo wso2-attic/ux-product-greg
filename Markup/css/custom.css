@@ -369,9 +369,6 @@ a.ast-type-item:hover {
 	height:250px;
 }
 
-.itm-ast:hover {
-}
-
 .itm-ast:hover h3, .itm-ast:hover .ast-auth, a:hover, a:focus {
 	color: #007d85;
     text-decoration: none;
@@ -381,36 +378,52 @@ br.c-both {
 	clear:both;
 }
 
-.ctrl-wr-asset .itm-ast .ast-img {
+.ctrl-wr-asset .itm-ast .ast-img,
+.ctrl-wr-asset .itm-ast .text-tile {
     display: block;
     position: relative;
     width: 140px;
 	height: 140px;
+    
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.ctrl-wr-asset .itm-ast .text-tile {
+    background: #4f5050;
+    padding: 10px;
+}
+
+.ctrl-wr-asset .itm-ast .text-tile .icon {
+    font-size: 30px;
+    color: #fff;
+}
+
+.ctrl-wr-asset .itm-ast .text-tile h3.ast-name:after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(79, 80, 80, 1) 50%);
 }
 
 .ctrl-wr-asset .itm-ast .ast-img img {
     width: 100%;
     height: auto;
 }
-
-.ctrl-wr-asset .itm-ast .ast-img {
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
  
-.ctrl-wr-asset .itm-ast .ast-img:hover {
+.ctrl-wr-asset .itm-ast .ast-img:hover,
+.ctrl-wr-asset .itm-ast .text-tile:hover {
     width: 150px;
     height: 150px;
 }
 
-.ctrl-wr-asset.selected .itm-ast .ast-img {
+.ctrl-wr-asset.selected .itm-ast .ast-img,
+.ctrl-wr-asset.selected .itm-ast .text-tile {
     border: 5px solid #007d85;
 }
 
-.ctrl-wr-asset.selected .itm-ast .ast-img:after, .ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:after {
+.ctrl-wr-asset.selected .itm-ast .ast-img:after, .ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:after,
+.ctrl-wr-asset.selected .itm-ast .text-tile:after, .ast-container .ctrl-wr-asset:hover .itm-ast .text-tile:after {
     position: absolute;
     display: block;
     border-top: 28px solid #007d85;
@@ -421,7 +434,8 @@ br.c-both {
     z-index: 101;
 }
 
-.ctrl-wr-asset.selected .itm-ast .ast-img:before, .ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:before {
+.ctrl-wr-asset.selected .itm-ast .ast-img:before, .ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:before,
+.ctrl-wr-asset.selected .itm-ast .text-tile:before, .ast-container .ctrl-wr-asset:hover .itm-ast .text-tile:before {
     position: absolute;
     display: block;
     content: "";
@@ -434,15 +448,17 @@ br.c-both {
     top: 0;
     z-index: 102;
     -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
-.ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:after {
+.ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:after,
+.ast-container .ctrl-wr-asset:hover .itm-ast .text-tile:after {
     border-top-width: 32px;
     border-left-width: 32px;
 }
 
-.ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:before {
+.ast-container .ctrl-wr-asset:hover .itm-ast .ast-img:before,
+.ast-container .ctrl-wr-asset:hover .itm-ast .text-tile:before {
     right: 0.3rem;
     top: 0.3rem;
 }
@@ -476,7 +492,7 @@ br.c-both {
 	float: left;
 	margin-left: 0px;
 	overflow: hidden;
-    width: 140px;
+    width: 100%;
 }
 
 h3.ast-name {

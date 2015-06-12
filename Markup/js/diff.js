@@ -27,7 +27,26 @@ var appBar = '.app-bar',
  * On window loaded functions.
  */
 $(window).load(function(){
+    
     setViewPanelsHeight();
+    
+    /*
+     * Adding code mirror pane title
+     */
+    $('.CodeMirror-merge-pane').each(function(i){
+        var title;
+        switch(i) {
+            case 0: 
+                title = 'Old'
+                break;
+            case 1: 
+                title = 'New'
+                break;
+        }
+
+        $('.CodeMirror', this).before('<div class="title">'+title+'</div>');
+    });
+    
 });
 
 /*
@@ -55,7 +74,7 @@ function setViewPanelsHeight(){
     else{
         $(viewPanel).css('height', 'auto');
     }
-    $('.CodeMirror, .CodeMirror-merge').height(($(viewPanel).height()-60));
+    $('.CodeMirror, .CodeMirror-merge').height(($(viewPanel).height()-80));
     
     /* Fix for code mirror diff view panels width unbalance issue */
     var CodeMirrorSizerMinWidth = '500px';
