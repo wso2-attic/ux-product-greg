@@ -176,12 +176,24 @@ body {
     text-decoration: none;
 }
 
+.view-panel.list ul li.code a {
+    font-size: 18px;
+    background: #161616;
+    margin-bottom: 10px;
+}
+
 .view-panel.list ul li a .icon  {
     background: #2c313b;
     font-size: 10px;
     padding: 4px;
     margin: -4px 10px 0 0;
 }
+
+.view-panel.list ul li.code a .icon {
+    font-size: 18px;
+    background: transparent;
+}
+
 
 .view-panel.list ul li.added a .icon {
     background: #00bb8d;
@@ -220,7 +232,8 @@ body {
 
 /* Code mirror overides */
 .CodeMirror { line-height: 1.2; }
-    @media screen and (min-width: 1300px) {
+
+@media screen and (min-width: 1300px) {
       article { max-width: 1000px; }
       #nav { border-right: 499px solid transparent; }
     }
@@ -233,7 +246,7 @@ body {
 }
 
 .code-container {
-    margin: 30px;
+    margin: 50px 30px 30px;
 }
 
 .CodeMirror-merge {
@@ -301,4 +314,35 @@ body {
 .cm-s-ambiance .CodeMirror-gutters {
     box-shadow: none;
     border-color: #007D85;
+}
+
+.CodeMirror-merge-copy {
+    display: none;
+}
+
+.CodeMirror-merge .title {
+    background: #424650;
+    padding: 0 100px 0 70px;
+    line-height: 30px;
+    height: 30px;
+    position: absolute;
+    margin-top: -30px;
+}
+
+.CodeMirror-merge .title:before {
+    position:absolute; 
+    right:-1px; 
+    top:-1px; 
+    content:'';
+    border-top: 80px solid #2c313b;
+    border-left: 30px solid transparent;
+}
+
+.CodeMirror-merge .title:after {
+    position:absolute; 
+    right:-2px; 
+    top:-2px; 
+    content:'';
+    border-top: 30px solid #2c313b;
+    border-left: 30px solid transparent;
 }
