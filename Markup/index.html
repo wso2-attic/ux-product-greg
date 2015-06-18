@@ -1,0 +1,204 @@
+<!--
+~   Copyright (c) WSO2 Inc. (http://wso2.com) All Rights Reserved.
+~
+~   Licensed under the Apache License, Version 2.0 (the "License");
+~   you may not use this file except in compliance with the License.
+~   You may obtain a copy of the License at
+~
+~        http://www.apache.org/licenses/LICENSE-2.0
+~
+~   Unless required by applicable law or agreed to in writing, software
+~   distributed under the License is distributed on an "AS IS" BASIS,
+~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~   See the License for the specific language governing permissions and
+~   limitations under the License.
+-->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Asset | WSO2 Enterprise Store back-office</title>
+   <!-- Bootstrap -->
+   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+   <link href="css/custom.css" rel="stylesheet">
+   <link href="css/custom-theme.css" rel="stylesheet">
+   <link href="css/common.css" rel="stylesheet">
+   <!-- fontawesome -->
+   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <!-- fontwso2 -->
+   <link rel="stylesheet" href="/publisher/themes/default/css/fontwso2.css">
+   <link rel="stylesheet" href="/publisher/themes/default/css/fontwso2-extend.css">
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+   <!--[if lt IE 9]>
+   <script src="js/html5shiv.min.js"></script>
+   <script src="js/respond.min.js"></script>
+   <![endif]-->
+</head>
+
+<body style="background:#2c313b;">
+    
+   <div class="wrapper">
+      <div class="container-fluid">
+         <!-- header -->
+         <header>
+            <div class="row wr-global-header">
+               <div class="col-xs-8 col-sm-6 col-lg-8 app-logo">
+                  <a href="#">
+                     <img src="imgs/logo.png" />
+                     <h2 class="app-title">Governance Center</h2>
+                  </a>
+               </div>
+               <div class="col-xs-4 col-sm-6 col-lg-4 wr-auth-container">
+                  <div class="wr-auth pull-right">
+                     <a href="#" data-toggle="dropdown">
+                        <div class="auth-img">
+                           admin
+                           <span class="fw-stack-md fw-lg">
+                           <i class="fw fw-user fw-stack-1-5x"></i>
+                           </span>
+                        </div>
+                     </a>
+                     <div class="dropdown-menu">
+                        <div class="cu-arrow"></div>
+                        <div class="dropdown-menu-content">
+                           <a class="filter-item" onclick="window.location.href='/publisher/logout'">Sign out</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- /header -->
+      </div>
+       
+       
+      <div class="container-fluid wr-main-content">
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+               <!-- content -->
+               <div class="ast-container" id="list_assets_table_body">
+                   
+                  <div class="row">
+                      <div class="thumbnail">
+                        <a href="#">
+                            <div class="icon"><i class="fw fw-api"></i></div>
+                            <div class="title">
+                                <h1>API</h1>
+                                <h2>Application Programming Interface</h2>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="thumbnail">
+                        <a href="#">
+                            <div class="icon"><i class="fw fw-wsdl"></i></div>
+                            <div class="title">
+                                <h1>WSDL</h1>
+                                <h2>Web Services Description Language</h2>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="thumbnail">
+                        <a href="#">
+                            <div class="icon"><i class="fw fw-wadl"></i></div>
+                            <div class="title">
+                                <h1>WADL</h1>
+                                <h2>Web Application Description Language</h2>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="thumbnail">
+                        <a href="#">
+                            <div class="icon"><i class="fw fw-soap"></i></div>
+                            <div class="title">
+                                <h1>SOAP Service</h1>
+                                <h2>Simple Object Access Protocol Service</h2>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="thumbnail">
+                        <a href="#">
+                            <div class="icon"><i class="fw fw-swagger"></i></div>
+                            <div class="title">
+                                <h1>Swagger</h1>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="thumbnail">
+                        <a href="#">
+                            <div class="icon"><i class="fw fw-rest-service"></i></div>
+                            <div class="title">
+                                <h1>Rest Service</h1>
+                                <h2>Representational State Transfer Service</h2>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="thumbnail">
+                        <a href="#">
+                            <div class="icon"><i class="fw fw-resource"></i></div>
+                            <div class="title">
+                                <h1>Schema</h1>
+                            </div>
+                        </a>
+                      </div>
+                      <div class="thumbnail">
+                        <a href="#">
+                            <div class="icon"><i class="fw fw-policy"></i></div>
+                            <div class="title">
+                                <h1>Policy</h1>
+                            </div>
+                        </a>
+                      </div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- /content/body -->
+   
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <p>Governance Center | &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://wso2.com/" target="_blank"><i class="icon fw fw-wso2"></i> Inc</a>. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    
+   <script src="js/jquery-1.10.2.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/discover.js"></script>
+   <script type="text/javascript">
+      $( document ).ready(function() {
+          $("[data-toggle=popover]").popover();
+
+          $(".ctrl-asset-type-switcher").popover({
+              html : true,
+              content: function() {
+                  return $('#content-asset-types').html();
+              }
+          });
+
+          $('#nav').affix({
+              offset: {
+                  top: $('header').height()
+              }
+          });
+      });
+       
+      $(function () {
+            $('#pageTab a:first').tab('show');
+      })
+
+   </script>
+    
+</body>
+</html>

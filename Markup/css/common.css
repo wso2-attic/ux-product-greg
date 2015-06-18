@@ -27,16 +27,21 @@ body {
 }
 
 .footer {
-    left: 25px;
+    background: #161616;
+    color: #fff;
 }
 
 .footer .fw {
     font-size: 21px;
 }
 
+.footer p {
+    margin: 5px 0;
+}
+
 .footer a {
     text-decoration: none;
-    color: #444;
+    color: #fff;
 }
 
 textarea { width: 100%; min-height: 100%; }
