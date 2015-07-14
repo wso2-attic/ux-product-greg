@@ -394,6 +394,7 @@ a.ast-type-item:hover {
 .thumbnail a, .thumbnail a:focus, .thumbnail a:hover {
     display: block;
     color: #fff;
+    text-decoration: none;
 }
 
 .thumbnail .icon { 
@@ -1144,6 +1145,7 @@ h2 span.fa-stack{
 
 .form-search a:hover {
     background: #949494;
+    text-decoration: none;
 }
 
 .form-search a.search {
@@ -1208,6 +1210,17 @@ h2 span.fa-stack{
 
 .tile h2 {
     font-size: 14px;
+    min-height: 30px;
+}
+
+.tile a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.tile a:hover {
+    text-decoration: none;
 }
 
 .tile .action-group {
@@ -1233,17 +1246,18 @@ h2 span.fa-stack{
     font-size: 60px;
 }
 
-.tile button {
-    font-size: 18px;
+.tile .btn {
+    font-size: 14px;
     font-weight: 200;
-    padding: 6px 12px;
+    padding: 6px 10px 5px;
+    text-decoration: none;
 }
 
-.tile.color1 button.btn.btn-default.secondary {
+.tile.color1 .btn.btn-default.secondary {
     background: #38979d !important;
 }
 
-.tile.color2 button.btn.btn-default.secondary {
+.tile.color2 .btn.btn-default.secondary {
     background: #158f68 !important;
 }
 .tile button .icon {
