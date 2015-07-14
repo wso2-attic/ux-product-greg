@@ -71,6 +71,7 @@ textarea { width: 100%; min-height: 100%; }
     padding: 40px 40px 80px;
 }
 
+/*
 .loading:before {
     content: "";
     display: block;
@@ -83,6 +84,7 @@ textarea { width: 100%; min-height: 100%; }
     background-color: #fff;
     opacity: 0.8;
 }
+*/
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
     color: #fff;
@@ -297,6 +299,7 @@ a.cu-btn:hover {
     position: relative;
 }
 
+/*
 .panel-collapse.loading:before {
     content: "";
     display: block;
@@ -322,6 +325,7 @@ a.cu-btn:hover {
     padding: 5px 10px;
     position: absolute;
 }
+*/
 
 .cu-acc-head-created {
 	font-weight:200;
@@ -346,6 +350,7 @@ a.cu-btn:hover {
     position: relative;
 }
 
+/*
 .loading {
     position: relative;
 }
@@ -375,6 +380,7 @@ a.cu-btn:hover {
     padding: 5px 10px;
     position: absolute;
 }
+*/
 
 select.select2 {
     height:0 !important;
@@ -498,6 +504,11 @@ select.select2 {
 
 .select-resource.select2-dropdown {
     z-index: 1000;
+}
+
+
+.select-resource.select2-dropdown .select2-results .select2-results__option--highlighted[aria-selected] {
+    background-color: #2C313B;
 }
 
 .wr-global-header {
