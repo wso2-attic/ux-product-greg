@@ -105,7 +105,7 @@
                     </a>
                 </h2>
             </div>
-            <div id="collapseNotes" class="panel-collapse collapse in" aria-labelledby="headingNotes">
+            <div id="collapseNotes" class="panel-collapse collapse" aria-labelledby="headingNotes">
                 <div class="panel-body wr-panel-notes">
 
                     <!--<a href="#" class="cu-btn-inner add-btn">-->
@@ -626,11 +626,11 @@
                                 </div>
                              </div>
                                
-                              <a class="pull-left switcher-link" href='#'>Associations</a>
+                              <a class="pull-left switcher-link" href='#'>Server</a>
                            </div>
                         </li>
                         <li>
-                            <a href="#" class="cu-btn">
+                            <a href="discover.html" class="cu-btn">
                                <span class="fw-stack">
                                     <i class="fw fw-circle fw-stack-1x"></i>
                                     <i class="fw fw-ring fw-stack-2x"></i>
@@ -692,158 +692,189 @@
       <div class="container-fluid wr-main-content">
          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-               
-                <!-- content -->
-            <div class="wr-content">
+                
+                <div class="well asset-well">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <img src="imgs/server.png" class="" alt="Thumb" style="width:250px;">
+                            </div>
+                            <div class="col-lg-10">
+                                <h1>Server ESB</h1>
 
-                <div class="wr-form">
+                                <i class="fw fw-circle"></i> Published
 
-                    <h1 class="wr-title">WeatherService</h1>
-                    <hr />
+                                <div class="well-description">Thu, 07 May 2015 12:07:19 GMT</div>
+                                <div class="well-description"></div>
+                                <div> 
 
-                    <div class="row">
-                        <div class="col-lg-8 col-centered">
-
-                            <div class="row wr-tile-buttons-list">
-                                <div class="col-lg-7">
-                                    <h4>
-                                        <span class="fw-stack fw-lg">
-                                            <i class="fw fw-circle fw-stack-2x"></i>
-                                            <i class="fw fw-stack-1x fw-inverse fw-number">1</i>
-                                        </span> SELECT AN ASSOCIATION TYPE
-                                    </h4>
-                                    <div class="wr-input-control">
-                                        <ul class="tile-buttons">
-                                            <li><a href="#" class="selected"><i class="fw fw-lock"></i>Security</a></li>
-                                            <li><a href="#"><i class="fw fw-lock"></i>Security</a></li>
-                                            <li><a href="#" class="disabled"><i class="fw fw-lock"></i>Security</a></li>
-                                            <li><a href="#" class="disabled"><i class="fw fw-lock"></i>Security</a></li>
-                                            <li><a href="#" class="disabled"><i class="fw fw-lock"></i>Security</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <h4>
-                                        <span class="fw-stack fw-lg">
-                                            <i class="fw fw-circle fw-stack-2x"></i>
-                                            <i class="fw fw-stack-1x fw-inverse fw-number">2</i>
-                                        </span> SELECT ASSET
-                                    </h4>
-                                    <div class="wr-input-control">
-                                        <select class="select2 select-resource" id="select-resource">
-                                            <!-- Dynamic content loads here -->
-                                        </select>
-                                    </div>
-                                    <div class="wr-input-control">
-                                        <a href="#" class="cu-btn-inner inverse">
-                                            <span class="fw-stack">
-                                                <i class="fw fw-ring fw-stack-2x"></i>
-                                                <i class="fw fw-add fw-stack-1x"></i>
-                                            </span> Add
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
-
-                            <div class="row wr-associations-list">
-
-                                <div class="col-lg-12">
-
-                                    <div class="clearfix wr-association">
-                                        <div class="wr-association-icon"><i class="fw fw-lock"></i></div>
-                                        <div class="wr-security-status">Secured</div>
-                                        <div class="wr-asset-desc">
-                                            <div class="wr-resource-icon">
-                                                <i class="fw fw-wsdl"></i>
-                                            </div>
-                                            <div class="wr-asset-details">
-                                                <div class="resource-name">WeatherReportService.xml</div>
-                                                <div class="resource-type">application/wsdl+xml</div>
-                                            </div>
-                                        </div>
-                                        <div class="wr-association-operations">
-                                            <a href="#" class="cu-btn-inner">
-                                                <span class="fw-stack">
-                                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                                    <i class="fw fw-edit fw-stack-1x"></i>
-                                                </span> Edit
-                                            </a>
-                                            <a href="#" class="cu-btn-inner">
-                                                <span class="fw-stack">
-                                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                                    <i class="fw fw-delete fw-stack-1x"></i>
-                                                </span> Delete
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="clearfix wr-association">
-                                        <div class="wr-association-icon"><i class="fw fw-lock"></i></div>
-                                        <div class="wr-security-status">Secured</div>
-                                        <div class="wr-asset-desc">
-                                            <div class="wr-resource-icon">
-                                                <i class="fw fw-wsdl"></i>
-                                            </div>
-                                            <div class="wr-asset-details">
-                                                <div class="resource-name">WeatherReportService.xml</div>
-                                                <div class="resource-type">application/wsdl+xml</div>
-                                            </div>
-                                        </div>
-                                        <div class="wr-association-operations">
-                                            <a href="#" class="cu-btn-inner">
-                                                <span class="fw-stack">
-                                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                                    <i class="fw fw-edit fw-stack-1x"></i>
-                                                </span> Edit
-                                            </a>
-                                            <a href="#" class="cu-btn-inner">
-                                                <span class="fw-stack">
-                                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                                    <i class="fw fw-delete fw-stack-1x"></i>
-                                                </span> Delete
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="clearfix wr-association">
-                                        <div class="wr-association-icon"><i class="fw fw-lock"></i></div>
-                                        <div class="wr-security-status">Secured</div>
-                                        <div class="wr-asset-desc">
-                                            <div class="wr-resource-icon">
-                                                <i class="fw fw-wsdl"></i>
-                                            </div>
-                                            <div class="wr-asset-details">
-                                                <div class="resource-name">WeatherReportService.xml</div>
-                                                <div class="resource-type">application/wsdl+xml</div>
-                                            </div>
-                                        </div>
-                                        <div class="wr-association-operations">
-                                            <a href="#" class="cu-btn-inner">
-                                                <span class="fw-stack">
-                                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                                    <i class="fw fw-edit fw-stack-1x"></i>
-                                                </span> Edit
-                                            </a>
-                                            <a href="#" class="cu-btn-inner">
-                                                <span class="fw-stack">
-                                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                                    <i class="fw fw-delete fw-stack-1x"></i>
-                                                </span> Delete
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
                         </div>
+                    </div>
+                </div>
+                
+                <a data-toggle="collapse" href="#collapseOverview" aria-expanded="false" class="collapsing-h2">
+                    <h2>
+                        <span class="fw-stack">
+                            <i class="fw fw-down-arrow fw-stack-1x"></i>
+                            <i class="fw fw-ring fw-stack-2x"></i>
+                        </span>
+                        Overview
+                    </h2>
+                </a>
+                <div class="collapse in" id="collapseOverview">
+
+                    <div class="row padding-bottom-lg">
+                        <div class="col-lg-2 text-right">Name</div>
+                        <div class="col-lg-10">WSO2 ESB Server</div>
+                    </div>
+
+                    <div class="row padding-bottom-lg">
+                        <div class="col-lg-2 text-right">Version</div>
+                        <div class="col-lg-10">1.0.0</div>
+                    </div>
+
+                    <div class="row padding-bottom-lg">
+                        <div class="col-lg-2 text-right">Type</div>
+                        <div class="col-lg-10">Server</div>
                     </div>
 
                 </div>
+                
+                
+                <a data-toggle="collapse" href="#collapseServices" aria-expanded="false" class="collapsing-h2">
+                    <h2>
+                        <span class="fw-stack">
+                            <i class="fw fw-down-arrow fw-stack-1x"></i>
+                            <i class="fw fw-ring fw-stack-2x"></i>
+                        </span>
+                        Services
+                    </h2>
+                </a>
+                <div class="collapse in" id="collapseServices">
+                    <div class="row">
+                        <div class="col-lg-12 ctrl-wr-asset-list">
+                            
+                            <div class="ctrl-wr-asset">
+                                 <div class="itm-ast">
+                                    <a class="ast-img" href='#'><img src='imgs/thumbnail.png' /></a>
+                                    <div class="ast-desc">
+                                       <h3 class="ast-name">TestServer1</h3>
+                                       <span class="ast-ver">V1.0 </span>
+                                    </div>
+                                    <br class="c-both" />
+                                 </div>
+                                 <br class="c-both" />
+                            </div>
 
-            </div>
-            <!-- /content -->
+                            <div class="ctrl-wr-asset">
+                                 <div class="itm-ast">
+                                    <a class="ast-img" href='#'><img src='imgs/thumbnail.png' /></a>
+                                    <div class="ast-desc">
+                                       <h3 class="ast-name">TestServer1</h3>
+                                       <span class="ast-ver">V1.0 </span>
+                                    </div>
+                                    <br class="c-both" />
+                                 </div>
+                                 <br class="c-both" />
+                            </div>
+
+                            <div class="ctrl-wr-asset">
+                                 <div class="itm-ast">
+                                    <a class="ast-img" href='#'><img src='imgs/thumbnail.png' /></a>
+                                    <div class="ast-desc">
+                                       <h3 class="ast-name">TestServer1</h3>
+                                       <span class="ast-ver">V1.0 </span>
+                                    </div>
+                                    <br class="c-both" />
+                                 </div>
+                                 <br class="c-both" />
+                            </div>
+                            
+                            <div class="ctrl-wr-asset">
+                                 <div class="itm-ast">
+                                    <a class="ast-img" href='#'><img src='imgs/thumbnail.png' /></a>
+                                    <div class="ast-desc">
+                                       <h3 class="ast-name">TestServer1</h3>
+                                       <span class="ast-ver">V1.0 </span>
+                                    </div>
+                                    <br class="c-both" />
+                                 </div>
+                                 <br class="c-both" />
+                            </div>
+                            
+                            <div class="ctrl-wr-asset">
+                                 <div class="itm-ast">
+                                    <a class="ast-img" href='#'><img src='imgs/thumbnail.png' /></a>
+                                    <div class="ast-desc">
+                                       <h3 class="ast-name">TestServer1</h3>
+                                       <span class="ast-ver">V1.0 </span>
+                                    </div>
+                                    <br class="c-both" />
+                                 </div>
+                                 <br class="c-both" />
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <a data-toggle="collapse" href="#collapseApplications" aria-expanded="false" class="collapsing-h2">
+                    <h2>
+                        <span class="fw-stack">
+                            <i class="fw fw-down-arrow fw-stack-1x"></i>
+                            <i class="fw fw-ring fw-stack-2x"></i>
+                        </span>
+                        Applications
+                    </h2>
+                </a>
+                <div class="collapse in" id="collapseApplications">
+                    <div class="row">
+                        <div class="col-lg-12 ctrl-wr-asset-list">
+                        
+                            <div class="ctrl-wr-asset">
+                                 <div class="itm-ast">
+                                    <a class="ast-img" href='#'><img src='imgs/application.png' /></a>
+                                    <div class="ast-desc">
+                                       <h3 class="ast-name">TestApplication1</h3>
+                                       <span class="ast-ver">V1.0 </span>
+                                    </div>
+                                    <br class="c-both" />
+                                 </div>
+                                 <br class="c-both" />
+                            </div>
+
+                            <div class="ctrl-wr-asset">
+                                 <div class="itm-ast">
+                                    <a class="ast-img" href='#'><img src='imgs/application.png' /></a>
+                                    <div class="ast-desc">
+                                       <h3 class="ast-name">TestApplication1</h3>
+                                       <span class="ast-ver">V1.0 </span>
+                                    </div>
+                                    <br class="c-both" />
+                                 </div>
+                                 <br class="c-both" />
+                            </div>
+
+                            <div class="ctrl-wr-asset">
+                                 <div class="itm-ast">
+                                    <a class="ast-img" href='#'><img src='imgs/application.png' /></a>
+                                    <div class="ast-desc">
+                                       <h3 class="ast-name">TestApplication1</h3>
+                                       <span class="ast-ver">V1.0 </span>
+                                    </div>
+                                    <br class="c-both" />
+                                 </div>
+                                 <br class="c-both" />
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
                 
             </div>
          </div>
@@ -896,58 +927,6 @@ $( document ).ready(function() {
         offset: {
             top: $('header').height()
         }
-    });
-
-    $('select.select2').select2({
-        placeholder: 'Select..'
-    });
-
-    $('select.select2[multiple=multiple]').select2({
-        placeholder: 'Select..',
-        tags: true
-    });
-
-    $(function() {
-
-        $.getJSON("associations.json", function(data){
-
-            function template(object){
-                var resourceType = object.type,
-                        iconClass = '';
-
-                $.each(data.icons, function(index, value) {
-                    if((data.icons[index].type) == object.type){
-                        iconClass = this.class;
-                        return false;
-                    }
-                });
-
-                return  '<div class="item" id="resource_' + object.id + '">' +
-                        '<div class="text">' +
-                        '<div class="resource-name">' + object.text + '</div>' +
-                        '<div class="resource-type">' + object.type + '</div>' +
-                        '</div>' +
-                        '<div class="icon">' +
-                        '<i class="fw fw-'+ iconClass +'"></i>' +
-                        '</div>' +
-                        '</div>';
-            }
-
-            // Initializing search element
-            $('#select-resource').select2({
-                placeholder: 'Select Asset',
-                data: data.results,
-                multiple: false,
-                width: "100%",
-                templateResult: template,
-                templateSelection : template,
-                dropdownCssClass: "select-resource",
-                containerCssClass: "select-resource",
-                escapeMarkup: function(m){ return m; }
-            });
-
-        });
-
     });
 
 }); 
