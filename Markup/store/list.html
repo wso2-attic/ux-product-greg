@@ -1,0 +1,345 @@
+<!--
+* Copyright (c) 2015, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+*
+* WSO2 Inc. licenses this file to you under the Apache License,
+* Version 2.0 (the "License"); you may not use this file except
+* in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied. See the License for the
+* specific language governing permissions and limitations
+* under the License.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Top Assets | WSO2 Governance Center - Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-wso2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/left-navigation.css"/>
+    <link rel="stylesheet" type="text/css" href="css/typeahead.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sidepanel.css"/>
+    <link rel="stylesheet" type="text/css" href="css/left-navigation.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/typeahead.css"/>
+    <link rel="stylesheet" type="text/css" href="css/navigation.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style-taxonomy.css"/>
+    <link rel="stylesheet" type="text/css" href="css/categorization.css"/>
+    <link rel="stylesheet" type="text/css" href="css/theme-categorization.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/top-assets.css"/>
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="http://wso2.com/files/favicon.ico" type="image/x-icon" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+            <link rel="stylesheet" href="/store/themes/store/css/ie.css" type="text/css">
+    <![endif]-->
+
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="container-fluid header-container">
+
+        <!-- header -->
+        <div class="wr-side-panel">
+            <div id="notifications" class="wr-side-notifiactions">
+                <div id="clearalldiv">
+                    <div class="wr-notification-desc">
+                        <div class="wr-notification-clear">
+                            <a href="javascript:void(0)" id="clearalllink" class="wr-clear-link "
+                               onclick="GregSubscriptionAPI.clearAllNotifications()">
+                                Clear all
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+
+            <div id="options" class="wr-side-options"></div>
+        </div>
+
+        <header>
+            <div class="es-row row wr-global-header">
+                <div class="col-xs-8 col-sm-8 app-logo">
+                    <a href="/store/pages/top-assets">
+                        <img src="img/logo.png" />
+                        <h2 class="app-title hidden-xs-320">Governance Center - Store</h2>
+                        <h2 class="app-title visible-xs-320">ES</h2>
+                    </a>
+                </div>
+
+                <div class="col-xs-4 col-sm-4 wr-auth-container">
+                    <div class="wr-auth pull-right">
+
+                        <ul class="signup-actions">
+                            <li class="padding-right-md">
+                                <a href="/store/login" id="btn-signin" >
+                                <i class="fw fw-lock fw-1-5x"></i>
+                                <span class="ro-text"> Sign in</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/store/../sso/register_new_user?relyingParty=store" id="btn-register" >
+                                <i class="fw fw-sign-up fw-1-5x"></i>
+                                <span class="ro-text"> Register</span></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- Modal -->
+        <div id="modal-login" class="modal hide fade modal-blue" tabindex="-1" role="dialog" aria-labelledby="publishModalLabel"
+             aria-hidden="true">
+
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="icon-remove"></i>
+                </button>
+
+                <div>
+                    <form id="form-login" action="" method="post">
+                        <fieldset>
+
+                            <h2>Sign in</h2>
+
+                            <div id="login-alert" class="alert alert-error"></div>
+
+                            <input id="inp-username" type="text" name="username" class="span3 required" placeholder="Username" autocomplete="off">
+                            <input id="inp-password" type="password" name="password" class="span3 required" placeholder="Password" autocomplete="off">
+
+                            <label class="checkbox">
+                                <input name="remember" type="checkbox">Remember me</label>
+                            <hr class="emboss">
+
+                            <a href="#" id="btn-signin" class="btn btn-primary btn-large"> Sign in </a><span
+                                class="help-inline"><a href="#">Forgot your password?</a></span>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal-register" class="modal hide fade modal-blue" tabindex="-1" role="dialog"
+             aria-labelledby="publishModalLabel" aria-hidden="true">
+
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="icon-remove"></i>
+                </button>
+
+                <div>
+                    <form id="form-register" action="" method="post">
+                        <fieldset>
+
+                            <h2>Register</h2>
+
+                            <div id="register-alert" class="alert alert-error">
+
+                            </div>
+
+                            <input id="inp-username-register" type="text" name="username" class="span3 required"
+                                   placeholder="Enter a Username" autocomplete="off">
+                            <input id="inp-password-register" type="password" name="password" class="span3 required"
+                                   placeholder="Password" autocomplete="off">
+                            <input id="inp-password-confirm" type="password" name="password" class="span3 required"
+                                   placeholder="Confirm Password" autocomplete="off">
+
+                            <hr class="emboss">
+
+                            <a href="#" id="btn-register-submit" class="btn btn-primary btn-large">
+                                Register
+                            </a>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container-fluid navigation-container">
+        <!-- secondary header - app bar -->
+        <div id="nav" class="es-row row wr-app-bar">
+            <div class="col-md-12 wr-action-container">
+                <div class="wr-asset-type-switcher">
+                    <div class="ctrl-asset-type-switcher">
+                        <div class="left-menu">
+                            <nav class="navigation">
+                                <a href='/store/pages/top-assets' id="all-assets" class=" active home top-item ">
+                                    <span class="icon"><i class="fw fw-store"></i></span> <span class="left-menu-item">ALL</span>
+                                </a>
+                                <a href='/store/assets/policy/list' id="policy" class="yellow all-item">
+                                    <span class="icon"><i class="fw fw-policy"></i></span> <span class="left-menu-item">Policies</span>
+                                </a>
+
+                                <a href='/store/assets/restservice/list' id="restservice" class="purple all-item">
+                                    <span class="icon"><i class="fw fw-rest-service"></i></span> <span class="left-menu-item">REST Services</span>
+                                </a>
+
+                                <a href='/store/assets/schema/list' id="schema" class="red all-item">
+                                    <span class="icon"><i class="fw fw-schema"></i></span> <span class="left-menu-item">Schemas</span>
+                                </a>
+
+                                <a href='/store/assets/soapservice/list' id="soapservice" class="orange all-item">
+                                    <span class="icon"><i class="fw fw-soap"></i></span> <span class="left-menu-item">SOAP Services</span>
+                                </a>
+
+                                <a href='/store/assets/swagger/list' id="swagger" class="grey all-item">
+                                    <span class="icon"><i class="fw fw-swagger"></i></span> <span class="left-menu-item">Swaggers</span>
+                                </a>
+
+                                <a href='/store/assets/wadl/list' id="wadl" class="blue all-item">
+                                    <span class="icon"><i class="fw fw-wadl"></i></span> <span class="left-menu-item">WADLs</span>
+                                </a>
+
+                                <a href='/store/assets/wsdl/list' id="wsdl" class="green all-item">
+                                    <span class="icon"><i class="fw fw-wsdl"></i></span> <span class="left-menu-item">WSDLs</span>
+                                </a>
+                            </nav>
+                            <input id="categorization-query" type="hidden" value=""/>
+
+                            <!--               <div class="collapse navbar-collapse" id="navbar-collapse-1"
+                                                style="float:left;width:100%;position:relative;">
+                                               <ul class="nav navbar-nav">
+
+                                                   <li class="dropdown" id="mainList"><a href="javascript:void(0)" class="dropdown-toggle"
+                                                                                         style="font-weight: 900;font-size: 250%;"
+                                                                                         data-toggle="dropdown">+ <b></b></a>
+                                                       <ul id="taxonomySelection" class="dropdown-menu">
+
+                                                       </ul>
+                                                   </li>
+                                               </ul>
+                                           </div>-->
+
+                            <div class="row" >
+                                <div >
+                                    <ul  id="accordion1">
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="the-basics" class="es-input-group input-group input-wrap">
+                    <div class="search-wrapper" style="float:left;width:80%;position:relative;left:0px;">
+
+                            <input  id="search"  type="text" class="typeahead es-form-control form-control" placeholder="Search in all asset types" value="">
+
+                        <div class="es-input-group-btn input-group-btn">
+                            <button class="btn btn-default wrap-input-right" type="button" title="Search" id="search-button" >
+                                <i class="fw fw-search" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" class="btn btn-default wrap-input-right" data-toggle="popover" data-placement="bottom"
+           data-content="
+                            <h3>Search Options</h3>
+                             <ul>
+                             <li>By Asset Name [Default] or [ <b>name:</b>&amp;lt;your-value&amp;gt; ]</li>
+                             <li>By Asset Content [ <b>content:</b>&amp;lt;your-value&amp;gt; ]</li>
+                             <li>By Asset Tag [ <b>tags:</b>&amp;lt;your-value&amp;gt; ]</li>
+                             <li>By Asset Version [ <b>version:</b>&amp;lt;your-value&amp;gt; ]</li>
+                             <li>By Media Type [ <b>mediaType:</b>&amp;lt;your-value&amp;gt; ]</li>
+                             <li>By Lifecycle Name [ <b>lcName:</b>&amp;lt;your-value&amp;gt; ]</li>
+                             <li>By Lifecycle State [ <b>lcState:</b>&amp;lt;your-value&amp;gt; ]</li>
+                             </ul>" data-html="true" id="search-info">
+            <i class="fw fw-info"></i>
+        </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-sm-3 col-md-5 col-lg-3 top-menu-right-custom right">
+                    <div>
+
+                        <ul class="es-nav nav es-navbar-nav navbar-nav navbar-right">
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- secondary header - app bar -->
+    </div>
+    
+    <div class="container-fluid body-container">
+        <div class="col-xs-1 col-sm-2 col-md-1 col-lg-1 left-col "></div>
+        <div class="col-xs-10 col-sm-9 col-md-9 col-lg-10 wr-content padding-none">
+            <div id="assets-container">
+                <!-- Popular assets listing till we figure out a way to display it elegentely --->
+                <div class="top-assets-empty-assert">There are no publicly available assets. Please login to access your assets</div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- footer -->
+<footer class="footer">
+    <p>Powered by WSO2 Governance Registry 5.3.0-SNAPSHOT | &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://wso2.com/" target="_blank"><i class="fw fw-wso2"></i> Inc.</a></p>
+</footer>
+<!-- /footer -->
+    
+<!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/sidepanel.js"></script>
+<script src="js/navigation.js"></script>
+
+
+<script type="text/javascript">
+    var affixOffset = 50;
+    $( document ).ready(function() {
+        $("[data-toggle=popover]").popover();
+
+        if ($(document).height() - $(window).height() > affixOffset) {
+            $(document).scroll(function () {
+                if ($(document).scrollTop() >= ( affixOffset + 20)) {
+                    $('#navigation-container').addClass("affix");
+                } else {
+                    $('#navigation-container').removeClass("affix");
+                }
+            });
+        }
+    });
+
+</script>
+</body>
+</html>
