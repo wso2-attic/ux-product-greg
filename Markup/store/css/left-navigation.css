@@ -274,19 +274,17 @@ nav.navigation .second_level > .left-menu-item {
     padding: 2px 5px;
 }
 
-.taxonomy > ul.nav li a:hover {
+.taxonomy > ul.nav li a:hover,
+.taxonomy > ul.nav li.active > a,
+.taxonomy > ul.nav li[aria-expanded="true"] > a {
     color: #74abd2;
     font-weight: 400;
     background: transparent;
+    opacity: 1;
 }
 
 .taxonomy > ul.nav li.active {
     background: #151922;
-}
-
-.taxonomy > ul.nav li.active a {
-    color: #74abd2;
-    font-weight: 400;
 }
 
 .taxonomy > ul.nav li.has-sub > a:hover:after,
