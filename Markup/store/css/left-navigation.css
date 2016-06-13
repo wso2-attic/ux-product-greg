@@ -233,7 +233,7 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy {
     background-color: #2c313b;
-    padding: 15px 0;
+    padding: 5px 0;
 }
 
 .taxonomy > h1 {
@@ -261,7 +261,7 @@ nav.navigation .second_level > .left-menu-item {
 }
 
 .taxonomy > ul.nav > li a {
-    color: #d8e4ff;
+    color: #fff;
     font-size: 16px;
     font-weight: 300;
 }
@@ -284,6 +284,11 @@ nav.navigation .second_level > .left-menu-item {
     background: #151922;
 }
 
+.taxonomy > ul.nav li.active a {
+    color: #74abd2;
+    font-weight: 400;
+}
+
 .taxonomy > ul.nav li.has-sub > a:hover:after,
 .taxonomy > ul.nav li.has-sub.active > a:after {
     font-family: font-wso2;
@@ -300,7 +305,11 @@ nav.navigation .second_level > .left-menu-item {
     margin: 10px;
 }
 
-.taxonomy > .buttons .btn .icon {
+.taxonomy > .buttons > .btn {
+    margin-right: 2px;
+}
+
+.taxonomy > .buttons > .btn > .icon {
     font-size: 10px;
 }
 
@@ -310,9 +319,45 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy > .filters > .filter-tag {
     background-color: #868686;
-    padding: 2px;
+    padding: 3px 6px;
     margin-bottom: 5px;
     cursor: pointer;
+}
+
+.taxonomy > .filters > .filter-tag:hover,
+.taxonomy > .filters > .filter-tag[aria-expanded="true"] {
+    background-color: #555555;
+}
+
+.taxonomy > .filters > .filter-tag > .value ul,
+.taxonomy > .filters > .filter-tag > .value ul > li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.taxonomy > .filters > .filter-tag > .value ul > li > ul {
+    padding-left: 10px;
+}
+
+.taxonomy > .filters > .filter-tag > .actions {
+    float: right;
+}
+
+.taxonomy > .filters > .filter-tag > .actions > .icon {
+    font-size: 7px;
+}
+
+.taxonomy > .filters > .filter-tag:hover > .actions > .icon {
+    color: #A0A0A0;
+}
+
+.taxonomy > .filters > .filter-tag > .actions > .icon:hover {
+    color: #fff;
+}
+
+.taxonomy > .filters > .filter-tag > .actions > .icon > .fw-inverse {
+    color: #868686;
 }
 
 .refine {
