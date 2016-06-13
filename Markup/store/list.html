@@ -224,6 +224,12 @@
                 
                 <nav class="taxonomy">
                     <h1>Filter by</h1>
+                    
+                    <div class="filters">
+                        <div class="filter-tag">../Security TG</div>
+                        <div class="filter-tag">../Platform TG</div>
+                    </div>
+                    
                     <ul class="nav nav-stacked">
                         <li class="has-sub"><a href="#">Companies</a>
                             <ul>
@@ -253,14 +259,26 @@
                         <li class="has-sub"><a href="#">Users</a></li>
                         <li><a href="#">Files</a></li>
                     </ul>
+                    
+                    <div class="buttons">
+                        <button type="button" class="btn btn-primary">
+                            <span class="icon fw fw-stack">
+                                <i class="fw fw-add fw-stack-1x"></i>
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                            </span> Add
+                        </button>
+                    </div>
                 </nav>
                 
                 <div class="refine">
                     <h1>Refine by</h1>
                     
-                    <div>
+                    <div class="panel">
                         <a data-toggle="collapse" href="#refineByType" aria-expanded="true" aria-controls="collapseExample">
-                            Type
+                            <span class="icon fw fw-stack">
+                                <i class="fw fw-right fw-stack-1x"></i>
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                            </span> Type
                         </a>
                         <div class="collapse in" id="refineByType" aria-expanded="true">
                             <div class="checkbox">
@@ -295,11 +313,14 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <a data-toggle="collapse" href="#refineByType" aria-expanded="false" aria-controls="collapseExample">
-                            Project
+                    <div class="panel">
+                        <a data-toggle="collapse" href="#refineByProject" aria-expanded="false" aria-controls="collapseExample">
+                            <span class="icon fw fw-stack">
+                                <i class="fw fw-right fw-stack-1x"></i>
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                            </span> Project
                         </a>
-                        <div class="collapse" id="refineByType">
+                        <div class="collapse" id="refineByProject">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="">
@@ -332,11 +353,14 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <a data-toggle="collapse" href="#refineByType" aria-expanded="false" aria-controls="collapseExample">
-                            Location
+                    <div class="panel">
+                        <a data-toggle="collapse" href="#refineByLocation" aria-expanded="false" aria-controls="collapseExample">
+                            <span class="icon fw fw-stack">
+                                <i class="fw fw-right fw-stack-1x"></i>
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                            </span> Location
                         </a>
-                        <div class="collapse" id="refineByType">
+                        <div class="collapse" id="refineByLocation">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="">

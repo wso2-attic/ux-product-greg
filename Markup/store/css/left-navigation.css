@@ -240,6 +240,12 @@ nav.navigation .second_level > .left-menu-item {
     color: #fff;
     font-size: 20px;
     padding-bottom: 0;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.taxonomy > ul.nav {
+    padding: 0 10px;
 }
 
 .taxonomy > ul.nav li {
@@ -290,15 +296,66 @@ nav.navigation .second_level > .left-menu-item {
     font-size: 12px;
 }
 
+.taxonomy > .buttons {
+    margin: 10px;
+}
+
+.taxonomy > .buttons .btn .icon {
+    font-size: 10px;
+}
+
+.taxonomy > .filters {
+    padding: 10px;
+}
+
+.taxonomy > .filters > .filter-tag {
+    background-color: #868686;
+    padding: 2px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
 .refine {
-    padding: 15px;
+    padding: 10px;
 }
 
 .refine > h1 {
     color: #fff;
     font-size: 20px;
     padding-bottom: 0;
+    margin-bottom: 0;
+    padding: 10px;
 }
+
+.refine > .panel {
+    border-radius: 0;
+    background-color: transparent;
+    padding: 3px 10px;
+    margin-bottom: 0;
+}
+
+.refine > .panel > a {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.refine > .panel .checkbox {
+    margin: 3px 0;
+}
+
+.refine a > .icon {
+    font-size: 9px;
+}
+
+.refine a > .icon > .fw-right {
+    top: 1px;
+}
+
+.refine a[aria-expanded="true"] > .icon > .fw-right:before {
+    content: "\e685";
+}
+
 
 /*==================== end of nav styles====================*/
 
