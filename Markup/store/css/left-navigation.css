@@ -39,6 +39,7 @@ nav.navigation > a > .icon {
     vertical-align: middle;
     width: 40px;
     height: 40px;
+    float: left;
 }
 
 nav.navigation > a > .icon > i {
@@ -57,6 +58,7 @@ nav.navigation > a > .left-menu-item {
     line-height: 40px;
     display: inline-block;
     width: 160px;
+    float: left;
 }
 
 nav.navigation > a.active {
@@ -88,10 +90,12 @@ nav.navigation > a.green:hover > .icon {
     color: white;
 }
 
-nav.navigation > a.green:hover > .left-menu-item, nav.navigation > a.green.active > .left-menu-item, nav.navigation > a.green.hover > .left-menu-item {
+nav.navigation > a.green:hover > .left-menu-item,
+nav.navigation > a.green.active > .left-menu-item,
+nav.navigation > a.green.hover > .left-menu-item {
     background: #212121;
     color: white;
-    width: 80%;
+    width: 160px;
     height: 40px;
 }
 
@@ -105,10 +109,12 @@ nav.navigation > a.red:hover > .icon {
     color: white;
 }
 
-nav.navigation > a.red:hover > .left-menu-item, nav.navigation > a.red.active > .left-menu-item, nav.navigation > a.red.hover > .left-menu-item {
+nav.navigation > a.red:hover > .left-menu-item,
+nav.navigation > a.red.active > .left-menu-item,
+nav.navigation > a.red.hover > .left-menu-item {
     background: #212121;
     color: white;
-    width: 80%;
+    width: 160px;
     height: 40px;
 }
 
@@ -122,10 +128,12 @@ nav.navigation > a.orange:hover > .icon {
     color: white;
 }
 
-nav.navigation > a.orange:hover > .left-menu-item, nav.navigation > a.orange.active > .left-menu-item, nav.navigation > a.orange.hover > .left-menu-item {
+nav.navigation > a.orange:hover > .left-menu-item,
+nav.navigation > a.orange.active > .left-menu-item,
+nav.navigation > a.orange.hover > .left-menu-item {
     background: #212121;
     color: white;
-    width: 80%;
+    width: 160px;
     height: 40px;
 }
 
@@ -139,10 +147,12 @@ nav.navigation > a.yellow:hover > .icon {
     color: white;
 }
 
-nav.navigation > a.yellow:hover > .left-menu-item, nav.navigation > a.yellow.active > .left-menu-item, nav.navigation > a.yellow.hover > .left-menu-item {
+nav.navigation > a.yellow:hover > .left-menu-item,
+nav.navigation > a.yellow.active > .left-menu-item,
+nav.navigation > a.yellow.hover > .left-menu-item {
     background: #212121;
     color: white;
-    width: 80%;
+    width: 160px;
     height: 40px;
 }
 
@@ -156,10 +166,12 @@ nav.navigation > a.blue:hover > .icon {
     color: white;
 }
 
-nav.navigation > a.blue:hover > .left-menu-item, nav.navigation > a.blue.active > .left-menu-item, nav.navigation > a.blue.hover > .left-menu-item {
+nav.navigation > a.blue:hover > .left-menu-item,
+nav.navigation > a.blue.active > .left-menu-item,
+nav.navigation > a.blue.hover > .left-menu-item {
     background: #212121;
     color: white;
-    width: 80%;
+    width: 160px;
     height: 40px;
 }
 
@@ -173,10 +185,12 @@ nav.navigation > a.purple:hover > .icon {
     color: white;
 }
 
-nav.navigation > a.purple:hover > .left-menu-item, nav.navigation > a.purple.active > .left-menu-item, nav.navigation > a.purple.hover > .left-menu-item {
+nav.navigation > a.purple:hover > .left-menu-item,
+nav.navigation > a.purple.active > .left-menu-item,
+nav.navigation > a.purple.hover > .left-menu-item {
     background: #8e44ad;
     color: white;
-    width: 80%;
+    width: 160px;
     height: 40px;
 }
 
@@ -190,10 +204,12 @@ nav.navigation > a.grey:hover > .icon {
     color: white;
 }
 
-nav.navigation > a.grey:hover > .left-menu-item, nav.navigation > a.grey.active > .left-menu-item, nav.navigation > a.grey.hover > .left-menu-item {
+nav.navigation > a.grey:hover > .left-menu-item,
+nav.navigation > a.grey.active > .left-menu-item,
+nav.navigation > a.grey.hover > .left-menu-item {
     background: #2c3e50;
     color: white;
-    width: 80%;
+    width: 160px;
     height: 40px;
 }
 nav.navigation .second_level {
