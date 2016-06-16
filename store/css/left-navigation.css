@@ -1,6 +1,15 @@
 /* Custom Stylesheet */
+html {
+    height: 100%;
+}
 body {
     background: #EFEFEF;
+    margin-bottom: 0;
+    min-height: 100%;
+    position: relative;
+}
+body > .wrapper {
+    height: 100%; 
 }
 nav.navigation {
     background: #525252;
@@ -243,13 +252,16 @@ nav.navigation .second_level > .left-menu-item {
     padding: 6px 0;
     text-align: left;
     width: 100%;
-
     vertical-align: middle;
 }
 
 .taxonomy {
     background-color: #2c313b;
     padding: 5px 0;
+}
+
+.sidebar-wrapper .taxonomy .nav i {
+    margin: 0;
 }
 
 .taxonomy > h1 {
@@ -268,12 +280,27 @@ nav.navigation .second_level > .left-menu-item {
     list-style: none;
     cursor: pointer;
     border-bottom: none;
+    position: relative;
+}
+
+.taxonomy > ul.nav li:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+.taxonomy > ul.nav > li {
+    margin-bottom: 5px !important;
 }
 
 .taxonomy > ul.nav > li ul {
     padding-left: 10px;
-    margin-top: 2px;
-    margin-bottom: 10px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.taxonomy > ul.nav > li[aria-expanded="true"] {
+    background: #222731;
+    padding: 5px 0;
 }
 
 .taxonomy > ul.nav > li a {
@@ -287,32 +314,52 @@ nav.navigation .second_level > .left-menu-item {
 }
 
 .taxonomy > ul.nav > li a {
-    padding: 2px 5px;
+    display: inline-block;
+}
+
+.taxonomy > ul.nav > li .btn {
+    padding: 0 4px 2px;
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+}
+
+.taxonomy > ul.nav > li .btn > .fw {
+    font-size: 7px;
 }
 
 .taxonomy > ul.nav li a:hover,
 .taxonomy > ul.nav li.active > a,
 .taxonomy > ul.nav li[aria-expanded="true"] > a {
     color: #74abd2;
-    font-weight: 400;
     background: transparent;
     opacity: 1;
 }
 
-.taxonomy > ul.nav li.active {
+.taxonomy > ul.nav li.active,
+.taxonomy > ul.nav li.active:hover {
     background: #151922;
 }
 
-.taxonomy > ul.nav li.has-sub > a:hover:after,
+.taxonomy > ul.nav li.has-sub > a:after,
 .taxonomy > ul.nav li.has-sub.active > a:after {
     font-family: font-wso2;
     content: "\e685";
-    vertical-align: text-bottom;
-    margin-left: 5px;
+    vertical-align: text-top;
+    margin-left: 8px;
+    display: inline-block;
+    margin-top: 1px;
+}
+
+.taxonomy > ul.nav li[aria-expanded="true"] > a:after {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    content: "\e687";
 }
 
 .taxonomy > ul.nav > li li a {
     font-size: 12px;
+    padding: 3px 24px 3px 7px;
+    line-height: 15px;
 }
 
 .taxonomy > .buttons {
@@ -321,6 +368,8 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy > .buttons > .btn {
     margin-right: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .taxonomy > .buttons > .btn > .icon {
@@ -336,6 +385,7 @@ nav.navigation .second_level > .left-menu-item {
     padding: 3px 6px;
     margin-bottom: 5px;
     cursor: pointer;
+    position: relative;
 }
 
 .taxonomy > .filters > .filter-tag:hover,
@@ -355,11 +405,14 @@ nav.navigation .second_level > .left-menu-item {
 }
 
 .taxonomy > .filters > .filter-tag > .actions {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-.taxonomy > .filters > .filter-tag > .actions > .icon {
+.taxonomy > .filters > .filter-tag > .actions > .btn {
     font-size: 7px;
+    padding: 5px;
 }
 
 .taxonomy > .filters > .filter-tag:hover > .actions > .icon {
@@ -372,6 +425,17 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy > .filters > .filter-tag > .actions > .icon > .fw-inverse {
     color: #868686;
+}
+
+.taxonomy-expand-view {
+    display: block;
+    position: absolute;
+    height: calc(100% - 40px);
+    z-index: 100000;
+    color: #fff;
+    top: 0;
+    display: none;
+    overflow-y: auto;
 }
 
 .refine {
@@ -1003,6 +1067,7 @@ a.ctrl-filter-category:hover,a.ctrl-filter-category:focus
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  height: calc(100% - 10px);
 }
 
 .page-content-wrapper.fixed,
@@ -1160,6 +1225,10 @@ ul.sidebar-messages > li {
 .sidebar-nav .nano-pane > .nano-slider,
 .sidebar-options .nano-pane > .nano-slider {
     background: #9e9e9e;
+}
+
+.nano.has-scrollbar > .nano-content {
+    right: -7px !important;
 }
 
 @media (min-width: 768px) {

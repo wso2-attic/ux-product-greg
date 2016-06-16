@@ -32,6 +32,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/font-wso2.css" rel="stylesheet">
     <link href="libs/nanoscroller_0.8.7/nanoscroller.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/jquery.navstack.css"/>
     <link rel="stylesheet" type="text/css" href="css/left-navigation.css"/>
     <link rel="stylesheet" type="text/css" href="css/typeahead.css"/>
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
@@ -56,7 +57,7 @@
 </head>
 
 <body>
-<div class="wrapper">
+
     <div class="container-fluid header-container">
 
         <!-- header -->
@@ -222,110 +223,128 @@
                     </a>
                 </nav>
                 
-                <nav class="taxonomy">
-                    
-                    <button type="button" class="btn btn-primary pull-right">
+                <div id="taxonomy-section">
+                
+                    <button type="button" class="btn btn-primary pull-right" id="maximize-taxonomy" data-toggle="tooltip" data-placement="left" title="Expand Section">
                         <i class="fw fw-right"></i>
                     </button>
                     
-                    <h1>Filter by</h1>
-                    
-                    <div class="filters">
-                        <div class="filter-tag">
-                            <span class="actions">
-                                <span class="icon fw fw-stack">
-                                    <i class="fw fw-circle fw-stack-2x"></i>
-                                    <i class="fw fw-minus fw-stack-1x fw-inverse"></i>    
+                    <nav class="taxonomy">
+
+                        <h1>Filter by</h1>
+
+                        <div class="filters">
+                            <div class="filter-tag">
+                                <span class="actions">
+                                    <button type="button" class="btn btn-danger" data-toggle="tooltip" title="Remove">
+                                        <span class="icon fw fw-stack">
+                                            <i class="fw fw-minus fw-stack-1x"></i>
+                                            <i class="fw fw-ring fw-stack-2x"></i>
+                                        </span>
+                                    </button>
                                 </span>
-                            </span>
-                            <span class="value">.. / Governance TG</span>
+                                <span class="value">.. / Governance TG</span>
+                            </div>
+                            <div class="filter-tag" aria-expanded="true">
+                                <span class="actions">
+                                    <button type="button" class="btn btn-default" data-toggle="tooltip" title="Edit">
+                                        <span class="icon fw fw-stack">
+                                            <i class="fw fw-edit fw-stack-1x"></i>
+                                            <i class="fw fw-ring fw-stack-2x"></i>
+                                        </span>
+                                    </button><button type="button" class="btn btn-danger" data-toggle="tooltip" title="Remove">
+                                        <span class="icon fw fw-stack">
+                                            <i class="fw fw-minus fw-stack-1x"></i>
+                                            <i class="fw fw-ring fw-stack-2x"></i>
+                                        </span>
+                                    </button>
+                                </span>
+                                <span class="value">
+                                    <ul>
+                                        <li>Companies
+                                            <ul>
+                                                <li>WSO2
+                                                    <ul>
+                                                        <li>Employees
+                                                            <ul>
+                                                                <li>Engineering
+                                                                    <ul>
+                                                                        <li>Platform TG</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </span>
+                            </div>
                         </div>
-                        <div class="filter-tag" aria-expanded="true">
-                            <span class="actions">
-                                <span class="icon fw fw-stack">
-                                    <i class="fw fw-edit fw-stack-1x"></i>
-                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                </span>
-                                <span class="icon fw fw-stack">
-                                    <i class="fw fw-circle fw-stack-2x"></i>
-                                    <i class="fw fw-minus fw-stack-1x fw-inverse"></i>
-                                </span>
-                            </span>
-                            <span class="value">
+
+                        <ul class="nav nav-stacked">
+                            <li class="has-sub" aria-expanded="true"><a href="#">Companies</a>
                                 <ul>
-                                    <li>Companies
+                                    <li class="has-sub" aria-expanded="true"><a href="#">WSO2</a>
                                         <ul>
-                                            <li>WSO2
+                                            <li class="has-sub" aria-expanded="true"><a href="#">Employees</a>
                                                 <ul>
-                                                    <li>Employees
+                                                    <li class="has-sub" aria-expanded="true"><a href="#">Engineering</a>
                                                         <ul>
-                                                            <li>Engineering
-                                                                <ul>
-                                                                    <li>Platform TG</li>
-                                                                </ul>
+                                                            <li class="active">
+                                                                <a href="#">Platform TG</a>
+                                                                <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Add Filter">
+                                                                    <span class="icon fw fw-stack">
+                                                                        <i class="fw fw-add fw-stack-1x"></i>
+                                                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                                                    </span>
+                                                                </button>
                                                             </li>
+                                                            <li><a href="#">Governance TG</a></li>
+                                                            <li><a href="#">Intergration TG</a></li>
+                                                            <li><a href="#">Data TG</a></li>
+                                                            <li><a href="#">API TG</a></li>
+                                                            <li><a href="#">QA TG</a></li>
+                                                            <li><a href="#">Cloud TG</a></li>
+                                                            <li><a href="#">NOTE:- This is a Long Text Text Value for UI Testing</a></li>
                                                         </ul>
                                                     </li>
+                                                    <li class="has-sub"><a href="#">Sales</a></li>
+                                                    <li class="has-sub"><a href="#">Marketing</a></li>
+                                                    <li class="has-sub"><a href="#">Finance</a></li>
+                                                    <li class="has-sub"><a href="#">Admin & HR</a></li>
+                                                    <li class="has-sub"><a href="#">Legal</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
+                                    <li><a href="#">Google</a></li>
+                                    <li><a href="#">Facebook</a></li>
                                 </ul>
-                            </span>
+                            </li>
+                            <li class="has-sub"><a href="#">Users</a></li>
+                            <li><a href="#">Files</a></li>
+                        </ul>
+
+                        <div class="buttons">
+                            <button type="button" class="btn btn-primary">
+                                <span class="icon fw fw-stack">
+                                    <i class="fw fw-add fw-stack-1x"></i>
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                </span> Update
+                            </button>
+
+                            <button type="button" class="btn btn-secondary">
+                                <span class="icon fw fw-stack">
+                                    <i class="fw fw-cancel fw-stack-1x"></i>
+                                    <i class="fw fw-ring fw-stack-2x"></i>
+                                </span> Cancel
+                            </button>
                         </div>
-                    </div>
+                    </nav>
                     
-                    <ul class="nav nav-stacked">
-                        <li class="has-sub" aria-expanded="true"><a href="#">Companies</a>
-                            <ul>
-                                <li class="has-sub" aria-expanded="true"><a href="#">WSO2</a>
-                                    <ul>
-                                        <li class="has-sub" aria-expanded="true"><a href="#">Employees</a>
-                                            <ul>
-                                                <li class="has-sub" aria-expanded="true"><a href="#">Engineering</a>
-                                                    <ul>
-                                                        <li class="active"><a href="#">Platform TG</a></li>
-                                                        <li><a href="#">Governance TG</a></li>
-                                                        <li><a href="#">Intergration TG</a></li>
-                                                        <li><a href="#">Data TG</a></li>
-                                                        <li><a href="#">API TG</a></li>
-                                                        <li><a href="#">QA TG</a></li>
-                                                        <li><a href="#">Cloud TG</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="has-sub"><a href="#">Sales</a></li>
-                                                <li class="has-sub"><a href="#">Marketing</a></li>
-                                                <li class="has-sub"><a href="#">Finance</a></li>
-                                                <li class="has-sub"><a href="#">Admin & HR</a></li>
-                                                <li class="has-sub"><a href="#">Legal</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Google</a></li>
-                                <li><a href="#">Facebook</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub"><a href="#">Users</a></li>
-                        <li><a href="#">Files</a></li>
-                    </ul>
-                    
-                    <div class="buttons">
-                        <button type="button" class="btn btn-primary">
-                            <span class="icon fw fw-stack">
-                                <i class="fw fw-add fw-stack-1x"></i>
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                            </span> Add
-                        </button>
-                        
-                        <button type="button" class="btn btn-secondary">
-                            <span class="icon fw fw-stack">
-                                <i class="fw fw-cancel fw-stack-1x"></i>
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                            </span> Cancel
-                        </button>
-                    </div>
-                </nav>
+                </div>
                 
                 <div class="refine">
                     <h1>Refine by</h1>
@@ -442,7 +461,8 @@
                 
             </div>
         </div>
-        <div class="container-fluid navigation-container">
+        <div class="container-fluid navigation-container"> 
+            
             <!-- secondary header - app bar -->
             <div id="nav" class="es-row row wr-app-bar">
                 <div class="col-md-12 wr-action-container">
@@ -488,6 +508,15 @@
             <!-- secondary header - app bar -->
         </div>
         <div class="container-fluid body-container">
+            
+            <div id="taxonomy-expand-view" class="taxonomy-expand-view">
+                <button type="button" class="btn btn-primary pull-right" id="contract-taxonomy" data-toggle="tooltip" data-placement="left" title="Contract Section">
+                    <i class="fw fw-left"></i>
+                </button>
+                
+                <nav class="taxonomy"><!-- Dynamic Content --></nav>
+            </div>
+            
             <div class="col-xs-10 col-sm-9 col-md-9 col-lg-10 wr-content padding-none">
                 <div id="assets-container">
                     <!-- Popular assets listing till we figure out a way to display it elegentely --->
@@ -496,49 +525,70 @@
             </div>
         </div>
     </div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>Powered by WSO2 Governance Registry 5.3.0-SNAPSHOT | &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://wso2.com/" target="_blank"><i class="fw fw-wso2"></i> Inc.</a></p>
+    </footer>
+    <!-- /footer -->
+
+    <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="libs/nanoscroller_0.8.7/jquery.nanoscroller.js"></script>
+    <script src="js/jquery.navstack.js"></script>
+    <script src="js/wso2-visual-elements.js"></script>
+    <script src="js/sidepanel.js"></script>
+    <script src="js/navigation.js"></script>
+
+
+    <script type="text/javascript">
+
+        var affixOffset = 50,
+            nanoScrollerSelector = $('.nano')
+
+        $( document ).ready(function() {
+            $("[data-toggle=popover]").popover();
+
+            if ($(document).height() - $(window).height() > affixOffset) {
+                $(document).scroll(function () {
+                    if ($(document).scrollTop() >= ( affixOffset + 20)) {
+                        $('#navigation-container').addClass("affix");
+                    } else {
+                        $('#navigation-container').removeClass("affix");
+                    }
+                });
+            }
+        });
+
+        $(window).load(function(){
+            nanoScrollerSelector.nanoScroller({ alwaysVisible: true });
+            $('[data-toggle="tooltip"]').tooltip();
+            //$('nav.taxonomy ul.nav').navstack();
+        });
+
+        $('body').on('click', '#maximize-taxonomy', function(){
+            var taxonomy = $('#taxonomy-section > .taxonomy').contents();
+            $('#taxonomy-expand-view > .taxonomy').html(taxonomy);
+            $('#taxonomy-section').hide();
+            $('#taxonomy-expand-view').show();
+            nanoScrollerSelector.nanoScroller();
+        });
+
+        $('body').on('click', '#contract-taxonomy', function(){
+            var taxonomy = $('#taxonomy-expand-view > .taxonomy').contents();
+            $('#taxonomy-section > .taxonomy').html(taxonomy);
+            $('#taxonomy-expand-view').hide();
+            $('#taxonomy-section').show();
+            nanoScrollerSelector.nanoScroller();
+        });
+
+    </script>
     
-</div>
-
-<!-- footer -->
-<footer class="footer">
-    <p>Powered by WSO2 Governance Registry 5.3.0-SNAPSHOT | &copy; <script>document.write(new Date().getFullYear());</script> <a href="http://wso2.com/" target="_blank"><i class="fw fw-wso2"></i> Inc.</a></p>
-</footer>
-<!-- /footer -->
-    
-<!-- /container -->
-
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="libs/nanoscroller_0.8.7/jquery.nanoscroller.min.js"></script>
-<script src="js/wso2-visual-elements.js"></script>
-<script src="js/sidepanel.js"></script>
-<script src="js/navigation.js"></script>
-
-
-<script type="text/javascript">
-    
-    var affixOffset = 50;
-    $( document ).ready(function() {
-        $("[data-toggle=popover]").popover();
-
-        if ($(document).height() - $(window).height() > affixOffset) {
-            $(document).scroll(function () {
-                if ($(document).scrollTop() >= ( affixOffset + 20)) {
-                    $('#navigation-container').addClass("affix");
-                } else {
-                    $('#navigation-container').removeClass("affix");
-                }
-            });
-        }
-    });
-    
-    $(window).load(function(){
-        $(".nano").nanoScroller();
-    });
-
-</script>
 </body>
 </html>
