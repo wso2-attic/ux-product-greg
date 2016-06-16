@@ -296,6 +296,7 @@ nav.navigation .second_level > .left-menu-item {
     padding-right: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
+    display: none;
 }
 
 .taxonomy > ul.nav > li[aria-expanded="true"] {
@@ -349,6 +350,10 @@ nav.navigation .second_level > .left-menu-item {
     margin-left: 8px;
     display: inline-block;
     margin-top: 1px;
+}
+
+.taxonomy > ul.nav li[aria-expanded="true"] > ul {
+    display: block;
 }
 
 .taxonomy > ul.nav li[aria-expanded="true"] > a:after {
@@ -413,18 +418,6 @@ nav.navigation .second_level > .left-menu-item {
 .taxonomy > .filters > .filter-tag > .actions > .btn {
     font-size: 7px;
     padding: 5px;
-}
-
-.taxonomy > .filters > .filter-tag:hover > .actions > .icon {
-    color: #A0A0A0;
-}
-
-.taxonomy > .filters > .filter-tag > .actions > .icon:hover {
-    color: #fff;
-}
-
-.taxonomy > .filters > .filter-tag > .actions > .icon > .fw-inverse {
-    color: #868686;
 }
 
 .taxonomy-expand-view {
