@@ -468,56 +468,9 @@
                 
             </div>
         </div>
-        <div class="container-fluid navigation-container"> 
-            
-            <!-- secondary header - app bar -->
-            <div id="nav" class="es-row row wr-app-bar">
-                <div class="col-md-12 wr-action-container">
-                    <div id="the-basics" class="es-input-group input-group input-wrap">
-                        <div class="search-wrapper" style="float:left;width:80%;position:relative;left:0px;">
-
-                            <input  id="search"  type="text" class="typeahead es-form-control form-control" placeholder="Search in all asset types" value="">
-
-                            <div class="es-input-group-btn input-group-btn">
-                                <button class="btn btn-default wrap-input-right" type="button" title="Search" id="search-button" >
-                                    <i class="fw fw-search" aria-hidden="true"></i>
-                                </button>
-                                <a href="#" class="btn btn-default wrap-input-right" data-toggle="popover" data-placement="bottom"
-                                   data-content="
-                                     <h3>Search Options</h3>
-                                     <ul>
-                                     <li>By Asset Name [Default] or [ <b>name:</b>&amp;lt;your-value&amp;gt; ]</li>
-                                     <li>By Asset Content [ <b>content:</b>&amp;lt;your-value&amp;gt; ]</li>
-                                     <li>By Asset Tag [ <b>tags:</b>&amp;lt;your-value&amp;gt; ]</li>
-                                     <li>By Asset Version [ <b>version:</b>&amp;lt;your-value&amp;gt; ]</li>
-                                     <li>By Media Type [ <b>mediaType:</b>&amp;lt;your-value&amp;gt; ]</li>
-                                     <li>By Lifecycle Name [ <b>lcName:</b>&amp;lt;your-value&amp;gt; ]</li>
-                                     <li>By Lifecycle State [ <b>lcState:</b>&amp;lt;your-value&amp;gt; ]</li>
-                                     </ul>" data-html="true" id="search-info">
-                                    <i class="fw fw-info"></i>
-                                </a>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="col-sm-3 col-md-5 col-lg-3 top-menu-right-custom right">
-                        <div>
-
-                            <ul class="es-nav nav es-navbar-nav navbar-nav navbar-right">
-
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- secondary header - app bar -->
-            
-        </div>
-        <div class="container-fluid body-container">
-            
-            <div id="taxonomy-expand-view" class="taxonomy-expand-view nano">
+        
+        <div class="container-fluid">
+            <div id="taxonomy-expand-view" class="taxonomy-expand-view sidebar-wrapper sidebar-nav toggled nano" data-offset-bottom="40">
                 <div class="nano-content">
                     <button type="button" class="btn btn-primary pull-right" id="contract-taxonomy" data-toggle="tooltip" data-placement="left" title="Contract Section">
                         <i class="fw fw-left"></i>
@@ -526,11 +479,60 @@
                     <nav class="taxonomy"><!-- Dynamic Content --></nav>
                 </div>
             </div>
-            
-            <div class="col-xs-10 col-sm-9 col-md-9 col-lg-10 wr-content padding-none">
-                <div id="assets-container">
-                    <!-- Popular assets listing till we figure out a way to display it elegentely --->
-                    <div class="top-assets-empty-assert">There are no publicly available assets. Please login to access your assets</div>
+
+            <div class="navigation-container"> 
+
+                <!-- secondary header - app bar -->
+                <div id="nav" class="es-row row wr-app-bar">
+                    <div class="col-md-12 wr-action-container">
+                        <div id="the-basics" class="es-input-group input-group input-wrap">
+                            <div class="search-wrapper" style="float:left;width:80%;position:relative;left:0px;">
+
+                                <input  id="search"  type="text" class="typeahead es-form-control form-control" placeholder="Search in all asset types" value="">
+
+                                <div class="es-input-group-btn input-group-btn">
+                                    <button class="btn btn-default wrap-input-right" type="button" title="Search" id="search-button" >
+                                        <i class="fw fw-search" aria-hidden="true"></i>
+                                    </button>
+                                    <a href="#" class="btn btn-default wrap-input-right" data-toggle="popover" data-placement="bottom"
+                                       data-content="
+                                         <h3>Search Options</h3>
+                                         <ul>
+                                         <li>By Asset Name [Default] or [ <b>name:</b>&amp;lt;your-value&amp;gt; ]</li>
+                                         <li>By Asset Content [ <b>content:</b>&amp;lt;your-value&amp;gt; ]</li>
+                                         <li>By Asset Tag [ <b>tags:</b>&amp;lt;your-value&amp;gt; ]</li>
+                                         <li>By Asset Version [ <b>version:</b>&amp;lt;your-value&amp;gt; ]</li>
+                                         <li>By Media Type [ <b>mediaType:</b>&amp;lt;your-value&amp;gt; ]</li>
+                                         <li>By Lifecycle Name [ <b>lcName:</b>&amp;lt;your-value&amp;gt; ]</li>
+                                         <li>By Lifecycle State [ <b>lcState:</b>&amp;lt;your-value&amp;gt; ]</li>
+                                         </ul>" data-html="true" id="search-info">
+                                        <i class="fw fw-info"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-3 col-md-5 col-lg-3 top-menu-right-custom right">
+                            <div>
+
+                                <ul class="es-nav nav es-navbar-nav navbar-nav navbar-right">
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- secondary header - app bar -->
+
+            </div>
+            <div class="body-container">
+                <div class="col-xs-10 col-sm-9 col-md-9 col-lg-10 wr-content padding-none">
+                    <div id="assets-container">
+                        <!-- Popular assets listing till we figure out a way to display it elegentely --->
+                        <div class="top-assets-empty-assert">There are no publicly available assets. Please login to access your assets</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -559,9 +561,11 @@
     <script type="text/javascript">
 
         var affixOffset = 50,
-            nanoScrollerSelector = $('.nano')
+            nanoScrollerSelector = $('.nano'),
+            taxonomySection = $('#taxonomy-section'),
+            taxonomyExpandView = $('#taxonomy-expand-view');
 
-        $( document ).ready(function() {
+        $(document).ready(function(){
             $("[data-toggle=popover]").popover();
 
             if ($(document).height() - $(window).height() > affixOffset) {
@@ -581,18 +585,19 @@
         });
 
         $('body').on('click', '#maximize-taxonomy', function(){
-            var taxonomy = $('#taxonomy-section > .taxonomy').contents();
-            $('#taxonomy-expand-view .taxonomy').html(taxonomy);
-            $('#taxonomy-section').hide();
-            $('#taxonomy-expand-view').show();
+            var taxonomy = $('> .taxonomy', taxonomySection).contents();
+            $('.taxonomy', taxonomyExpandView).html(taxonomy);
+            taxonomySection.hide();
+            taxonomyExpandView.show();
             nanoScrollerSelector.nanoScroller();
+            $(window).resize();
         });
 
         $('body').on('click', '#contract-taxonomy', function(){
-            var taxonomy = $('#taxonomy-expand-view .taxonomy').contents();
-            $('#taxonomy-section > .taxonomy').html(taxonomy);
-            $('#taxonomy-expand-view').hide();
-            $('#taxonomy-section').show();
+            var taxonomy = $('.taxonomy', taxonomyExpandView).contents();
+            $('> .taxonomy', taxonomySection).html(taxonomy);
+            taxonomyExpandView.hide();
+            taxonomySection.show();
             nanoScrollerSelector.nanoScroller();
         });
 
