@@ -235,7 +235,7 @@
                         <div class="filters">
                             <div class="filter-tag">
                                 <span class="actions">
-                                    <button type="button" class="btn btn-danger" data-toggle="tooltip" title="Remove">
+                                    <button type="button" class="btn btn-danger" data-placement="left" data-toggle="tooltip" title="Remove">
                                         <span class="icon fw fw-stack">
                                             <i class="fw fw-minus fw-stack-1x"></i>
                                             <i class="fw fw-ring fw-stack-2x"></i>
@@ -246,12 +246,12 @@
                             </div>
                             <div class="filter-tag" aria-expanded="true">
                                 <span class="actions">
-                                    <button type="button" class="btn btn-default" data-toggle="tooltip" title="Edit">
+                                    <button type="button" class="btn btn-default" data-placement="left" data-toggle="tooltip" title="Edit">
                                         <span class="icon fw fw-stack">
                                             <i class="fw fw-edit fw-stack-1x"></i>
                                             <i class="fw fw-ring fw-stack-2x"></i>
                                         </span>
-                                    </button><button type="button" class="btn btn-danger" data-toggle="tooltip" title="Remove">
+                                    </button><button type="button" class="btn btn-danger" data-placement="left" data-toggle="tooltip" title="Remove">
                                         <span class="icon fw fw-stack">
                                             <i class="fw fw-minus fw-stack-1x"></i>
                                             <i class="fw fw-ring fw-stack-2x"></i>
@@ -293,14 +293,22 @@
                                                         <ul>
                                                             <li class="active">
                                                                 <a href="#">Platform TG</a>
-                                                                <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Add Filter">
+                                                                <button type="button" class="btn btn-primary btn-add" data-placement="left" data-toggle="tooltip" title="Add Filter">
                                                                     <span class="icon fw fw-stack">
                                                                         <i class="fw fw-add fw-stack-1x"></i>
                                                                         <i class="fw fw-ring fw-stack-2x"></i>
                                                                     </span>
                                                                 </button>
                                                             </li>
-                                                            <li><a href="#">Governance TG</a></li>
+                                                            <li>
+                                                                <a href="#">Governance TG</a>
+                                                                <button type="button" class="btn btn-primary btn-add" data-placement="left" data-toggle="tooltip" title="Add Filter">
+                                                                    <span class="icon fw fw-stack">
+                                                                        <i class="fw fw-add fw-stack-1x"></i>
+                                                                        <i class="fw fw-ring fw-stack-2x"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </li>
                                                             <li><a href="#">Intergration TG</a></li>
                                                             <li><a href="#">Data TG</a></li>
                                                             <li><a href="#">API TG</a></li>
@@ -329,7 +337,7 @@
                         <div class="buttons">
                             <button type="button" class="btn btn-primary">
                                 <span class="icon fw fw-stack">
-                                    <i class="fw fw-add fw-stack-1x"></i>
+                                    <i class="fw fw-refresh fw-stack-1x"></i>
                                     <i class="fw fw-ring fw-stack-2x"></i>
                                 </span> Update
                             </button>
@@ -505,15 +513,18 @@
                 </div>
             </div>
             <!-- secondary header - app bar -->
+            
         </div>
         <div class="container-fluid body-container">
             
-            <div id="taxonomy-expand-view" class="taxonomy-expand-view">
-                <button type="button" class="btn btn-primary pull-right" id="contract-taxonomy" data-toggle="tooltip" data-placement="left" title="Contract Section">
-                    <i class="fw fw-left"></i>
-                </button>
-                
-                <nav class="taxonomy"><!-- Dynamic Content --></nav>
+            <div id="taxonomy-expand-view" class="taxonomy-expand-view nano">
+                <div class="nano-content">
+                    <button type="button" class="btn btn-primary pull-right" id="contract-taxonomy" data-toggle="tooltip" data-placement="left" title="Contract Section">
+                        <i class="fw fw-left"></i>
+                    </button>
+
+                    <nav class="taxonomy"><!-- Dynamic Content --></nav>
+                </div>
             </div>
             
             <div class="col-xs-10 col-sm-9 col-md-9 col-lg-10 wr-content padding-none">
@@ -567,19 +578,18 @@
         $(window).load(function(){
             nanoScrollerSelector.nanoScroller({ alwaysVisible: true });
             $('[data-toggle="tooltip"]').tooltip();
-            //$('nav.taxonomy ul.nav').navstack();
         });
 
         $('body').on('click', '#maximize-taxonomy', function(){
             var taxonomy = $('#taxonomy-section > .taxonomy').contents();
-            $('#taxonomy-expand-view > .taxonomy').html(taxonomy);
+            $('#taxonomy-expand-view .taxonomy').html(taxonomy);
             $('#taxonomy-section').hide();
             $('#taxonomy-expand-view').show();
             nanoScrollerSelector.nanoScroller();
         });
 
         $('body').on('click', '#contract-taxonomy', function(){
-            var taxonomy = $('#taxonomy-expand-view > .taxonomy').contents();
+            var taxonomy = $('#taxonomy-expand-view .taxonomy').contents();
             $('#taxonomy-section > .taxonomy').html(taxonomy);
             $('#taxonomy-expand-view').hide();
             $('#taxonomy-section').show();

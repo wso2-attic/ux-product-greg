@@ -319,11 +319,16 @@ nav.navigation .second_level > .left-menu-item {
     display: inline-block;
 }
 
-.taxonomy > ul.nav > li .btn {
+.taxonomy > ul.nav li > .btn {
     padding: 0 4px 2px;
     position: absolute;
     right: 0;
+    top: 0;
     font-size: 12px;
+}
+
+.taxonomy > ul.nav li:not(.active) > .btn-add {
+    display: none;
 }
 
 .taxonomy > ul.nav > li .btn > .fw {
@@ -430,10 +435,14 @@ nav.navigation .second_level > .left-menu-item {
     top: 0;
     display: none;
     overflow-y: auto;
+    background-color: #2C313B;
+    min-width: 300px;
+    width: 40%;
 }
 
 .refine {
     padding: 10px;
+    background: #151922;
 }
 
 .refine > h1 {
@@ -1214,12 +1223,11 @@ ul.sidebar-messages > li {
 
 .nano > .nano-pane > .nano-slider {
     border-radius: 0;
-    background: #272c30;
+    background: #9e9e9e;
 }
 
-.sidebar-nav .nano-pane > .nano-slider,
-.sidebar-options .nano-pane > .nano-slider {
-    background: #9e9e9e;
+.nano > .nano-content {
+    right: 0 !important;
 }
 
 .nano.has-scrollbar > .nano-content {
