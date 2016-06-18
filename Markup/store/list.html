@@ -274,6 +274,8 @@
                                         </span>
                                     </button>
                                 </span>
+                                <span class="value-truncate">.. / Platform TG</span>
+                                <span class="value">Companies / WSO2 / Employees / Engineering / Platform TG</span>
                                 <span class="value-expand">
                                     <ul>
                                         <li>Companies
@@ -629,6 +631,13 @@
             $(this).closest('.filter-tag').append('<span class="value-edit"><div class="taxonomy">' + taxonomyEdit[0].outerHTML + '</div></span>');
             
             $('[data-toggle="tooltip"]').tooltip();
+        });
+        
+        $('body').on('click', '.taxonomy .filter-tag .btn-cancel', function(){
+            $(this).hide();
+            $(this).siblings('.btn-edit').show();
+            $(this).closest('.filter-tag').find('.value-edit').remove();
+            $(this).closest('.filter-tag').find('.value').show();
         });
 
     </script>
