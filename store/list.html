@@ -252,10 +252,31 @@
                                         </span>
                                     </button>
                                 </span>
-                                <span class="value-truncate">.. / Governance TG</span>
-                                <span class="value">Companies / WSO2 / Employees / Engineering / Governance TG</span>
+                                <span class="value value-truncate">.. / Governance TG</span>
+                                <span class="value value-full">Companies / WSO2 / Employees / Engineering / Governance TG</span>
+                                <span class="value value-expand">
+                                    <ul>
+                                        <li>Companies
+                                            <ul>
+                                                <li>WSO2
+                                                    <ul>
+                                                        <li>Employees
+                                                            <ul>
+                                                                <li>Engineering
+                                                                    <ul>
+                                                                        <li>Platform TG</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </span>
                             </div>
-                            <div class="filter-tag" aria-expanded="true">
+                            <div class="filter-tag expand" aria-expanded="true">
                                 <span class="actions">
                                     <button type="button" class="btn btn-secondary btn-cancel" data-placement="left" data-toggle="tooltip" title="Cancel">
                                         <span class="icon fw fw-stack">
@@ -274,9 +295,9 @@
                                         </span>
                                     </button>
                                 </span>
-                                <span class="value-truncate">.. / Platform TG</span>
-                                <span class="value">Companies / WSO2 / Employees / Engineering / Platform TG</span>
-                                <span class="value-expand">
+                                <span class="value value-truncate">.. / Platform TG</span>
+                                <span class="value value-full">Companies / WSO2 / Employees / Engineering / Platform TG</span>
+                                <span class="value value-expand">
                                     <ul>
                                         <li>Companies
                                             <ul>
@@ -625,19 +646,18 @@
             $(taxonomyEdit).find('.fw-add').removeClass('fw-add').addClass('fw-refresh');
             $(taxonomyEdit).find('.btn-add').removeClass('btn-add').addClass('btn-update');
             
+            $(this).closest('.filter-tag').removeClass('expand');
             $(this).closest('.filter-tag').addClass('edit');
-            $(this).closest('.filter-tag').find('.value-expand').hide();
-            $(this).closest('.filter-tag').find('.value-edit').remove();
-            $(this).closest('.filter-tag').append('<span class="value-edit"><div class="taxonomy">' + taxonomyEdit[0].outerHTML + '</div></span>');
+            $(this).closest('.filter-tag').append('<span class="value value-edit"><div class="taxonomy">' + taxonomyEdit[0].outerHTML + '</div></span>');
             
             $('[data-toggle="tooltip"]').tooltip();
         });
         
         $('body').on('click', '.taxonomy .filter-tag .btn-cancel', function(){
-            $(this).hide();
-            $(this).siblings('.btn-edit').show();
             $(this).closest('.filter-tag').find('.value-edit').remove();
-            $(this).closest('.filter-tag').find('.value').show();
+            $(this).closest('.filter-tag').attr('aria-expanded', 'false');
+            $(this).closest('.filter-tag').removeClass('expand');
+            $(this).closest('.filter-tag').removeClass('edit');
         });
 
     </script>

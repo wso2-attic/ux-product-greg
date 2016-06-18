@@ -398,11 +398,28 @@ nav.navigation .second_level > .left-menu-item {
     position: relative;
 }
 
-.taxonomy > .filters > .filter-tag > .value,
-.taxonomy > .filters > .filter-tag > .value-truncate,
-.taxonomy > .filters > .filter-tag > .value-expand {
+.taxonomy > .filters > .filter-tag > .value {
     padding: 3px 6px;
+    display: none;
+}
+
+.taxonomy > .filters > .filter-tag.edit > .value-edit,
+.taxonomy > .filters > .filter-tag.expand > .value-expand,
+.taxonomy > .filters > .filter-tag.edit > .value-full,
+.taxonomy > .filters > .filter-tag > .value-truncate,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag > .value-full {
     display: block;
+}
+
+.taxonomy > .filters > .filter-tag > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag > .value-truncate,
+.taxonomy > .filters > .filter-tag.edit > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag.edit > .value-full,
+.taxonomy > .filters > .filter-tag.edit > .value-truncate,
+.taxonomy > .filters > .filter-tag.expand > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag.expand > .value-full,
+.taxonomy > .filters > .filter-tag.expand > .value-truncate {
+    display: none;
 }
 
 .taxonomy > .filters > .filter-tag:hover,
@@ -449,29 +466,10 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy > .filters .btn-edit {
     background: #fff;
-    display: none;
 }
 
-.sidebar-wrapper.taxonomy-expand-view  .taxonomy > ul.nav li[aria-expanded="true"] > ul {
+.sidebar-wrapper.taxonomy-expand-view .taxonomy > ul.nav li[aria-expanded="true"] > ul {
     margin-left: 15px;
-}
-
-.sidebar-wrapper.taxonomy-expand-view  .taxonomy > .filters > .filter-tag > .value-truncate,
-.taxonomy > .filters > .filter-tag > .value {
-    display: none;
-}
-
-.sidebar-wrapper.taxonomy-expand-view  .taxonomy > .filters > .filter-tag > .value {
-    display: block;
-}
-
-.sidebar-wrapper.taxonomy-expand-view  .taxonomy > .filters .btn-edit,
-.taxonomy > .filters > .filter-tag[aria-expanded="true"] .btn-edit {
-    display: inline-block;
-}
-
-.taxonomy > .filters > .filter-tag > .value-edit {
-    display: block;
 }
 
 .taxonomy > .filters > .filter-tag > .value-edit .taxonomy {
@@ -479,12 +477,15 @@ nav.navigation .second_level > .left-menu-item {
     padding: 0;
 }
 
-.taxonomy > .filters > .filter-tag.edit .btn-edit,
-.taxonomy > .filters > .filter-tag .btn-cancel {
+.taxonomy > .filters > .filter-tag .btn-edit,
+.taxonomy > .filters > .filter-tag .btn-cancel,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag.edit .btn-edit {
     display: none;
 }
 
-.taxonomy > .filters > .filter-tag.edit .btn-cancel {
+.taxonomy > .filters > .filter-tag.edit .btn-cancel,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag .btn-edit,
+.taxonomy > .filters > .filter-tag.expand .btn-edit {
     display: inline-block;
 }
 
