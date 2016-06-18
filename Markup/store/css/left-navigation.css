@@ -393,10 +393,16 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy > .filters > .filter-tag {
     background-color: #868686;
-    padding: 3px 6px;
     margin-bottom: 5px;
     cursor: pointer;
     position: relative;
+}
+
+.taxonomy > .filters > .filter-tag > .value,
+.taxonomy > .filters > .filter-tag > .value-truncate,
+.taxonomy > .filters > .filter-tag > .value-expand {
+    padding: 3px 6px;
+    display: block;
 }
 
 .taxonomy > .filters > .filter-tag:hover,
@@ -419,6 +425,7 @@ nav.navigation .second_level > .left-menu-item {
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 1;
 }
 
 .taxonomy > .filters > .filter-tag > .actions > .btn {
@@ -461,6 +468,36 @@ nav.navigation .second_level > .left-menu-item {
 .sidebar-wrapper.taxonomy-expand-view  .taxonomy > .filters .btn-edit,
 .taxonomy > .filters > .filter-tag[aria-expanded="true"] .btn-edit {
     display: inline-block;
+}
+
+.taxonomy > .filters > .filter-tag > .value-edit {
+    display: block;
+}
+
+.taxonomy > .filters > .filter-tag > .value-edit .taxonomy {
+    background: transparent;
+    padding: 0;
+}
+
+.taxonomy > .filters > .filter-tag.edit .btn-edit,
+.taxonomy > .filters > .filter-tag .btn-cancel {
+    display: none;
+}
+
+.taxonomy > .filters > .filter-tag.edit .btn-cancel {
+    display: inline-block;
+}
+
+.taxonomy > .filters > .filter-tag > .value-edit .taxonomy > ul.nav {
+    padding: 0;
+}
+
+.taxonomy > .filters > .filter-tag > .value-edit .taxonomy .buttons {
+    padding-bottom: 15px;
+}
+
+.taxonomy > .filters > .filter-tag > .value-edit .taxonomy > ul.nav > li[aria-expanded="true"] {
+    background: #3c3c3c;
 }
 
 .refine {
