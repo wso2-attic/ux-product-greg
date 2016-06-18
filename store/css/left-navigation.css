@@ -316,6 +316,7 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy > ul.nav > li a {
     display: inline-block;
+    padding: 3px 30px 3px 7px;
 }
 
 .taxonomy > ul.nav li > a > .btn {
@@ -342,8 +343,8 @@ nav.navigation .second_level > .left-menu-item {
     opacity: 1;
 }
 
-.taxonomy > ul.nav li.active a,
-.taxonomy > ul.nav li.active:hover a {
+.taxonomy > ul.nav li.active > a,
+.taxonomy > ul.nav li.active:hover > a {
     background: #151922;
 }
 
@@ -369,7 +370,6 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy > ul.nav > li li a {
     font-size: 12px;
-    padding: 3px 30px 3px 7px;
     line-height: 15px;
 }
 
