@@ -272,25 +272,25 @@ nav.navigation .second_level > .left-menu-item {
     padding: 10px;
 }
 
-.taxonomy > ul.nav {
+.taxonomy ul.nav {
     padding: 0 10px;
 }
 
-.taxonomy > ul.nav li {
+.taxonomy ul.nav li {
     list-style: none;
     cursor: pointer;
     border-bottom: none;
 }
 
-.taxonomy > ul.nav li:not(:last-child) {
+.taxonomy ul.nav li:not(:last-child) {
     margin-bottom: 2px;
 }
 
-.taxonomy > ul.nav > li {
+.taxonomy ul.nav > li {
     margin-bottom: 5px !important;
 }
 
-.taxonomy > ul.nav > li ul {
+.taxonomy ul.nav > li ul {
     padding-left: 10px;
     padding-right: 5px;
     margin-top: 5px;
@@ -298,28 +298,32 @@ nav.navigation .second_level > .left-menu-item {
     display: none;
 }
 
-.taxonomy > ul.nav > li[aria-expanded="true"] {
+.taxonomy ul.nav > li[aria-expanded="true"] {
     background: #222731;
     padding: 5px 0;
 }
 
-.taxonomy > ul.nav > li a {
+.taxonomy ul.nav > li a {
     color: #fff;
     font-size: 16px;
     font-weight: 300;
     position: relative;
 }
 
-.taxonomy > ul.nav > li > a {
+.taxonomy ul.nav > li > a {
     padding: 4px 7px;
 }
 
-.taxonomy > ul.nav > li a {
+.taxonomy ul.nav li a {
     display: inline-block;
+    padding: 3px 30px 3px 7px;
+}
+
+.taxonomy ul.nav li.has-sub > a {
     padding: 3px 45px 3px 7px;
 }
 
-.taxonomy > ul.nav li > a > .btn {
+.taxonomy ul.nav li > a > .btn {
     padding: 1px 4px 3px;
     position: absolute;
     right: 0;
@@ -327,28 +331,28 @@ nav.navigation .second_level > .left-menu-item {
     font-size: 12px;
 }
 
-.taxonomy > ul.nav li:not(.active) > a > .btn {
+.taxonomy ul.nav li:not(.active) > a > .btn {
     display: none;
 }
 
-.taxonomy > ul.nav > li .btn > .fw {
+.taxonomy ul.nav > li .btn > .fw {
     font-size: 7px;
 }
 
-.taxonomy > ul.nav li a:hover,
-.taxonomy > ul.nav li.active > a,
-.taxonomy > ul.nav li[aria-expanded="true"] > a {
+.taxonomy ul.nav li a:hover,
+.taxonomy ul.nav li.active > a,
+.taxonomy ul.nav li[aria-expanded="true"] > a {
     color: #74abd2;
     background: transparent;
     opacity: 1;
 }
 
-.taxonomy > ul.nav li.active > a,
-.taxonomy > ul.nav li.active:hover > a {
+.taxonomy ul.nav li.active > a,
+.taxonomy ul.nav li.active:hover > a {
     background: #151922;
 }
 
-.taxonomy > ul.nav li.has-sub > a:after {
+.taxonomy ul.nav li.has-sub > a:after {
     font-family: font-wso2;
     content: "\e685";
     vertical-align: text-top;
@@ -359,95 +363,95 @@ nav.navigation .second_level > .left-menu-item {
     position: absolute;
 }
 
-.taxonomy > ul.nav li[aria-expanded="true"] > ul {
+.taxonomy ul.nav li[aria-expanded="true"] > ul {
     display: block;
     margin-left: 2px;
 }
 
-.taxonomy > ul.nav li[aria-expanded="true"] > a:after {
+.taxonomy ul.nav li[aria-expanded="true"] > a:after {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
     content: "\e687";
 }
 
-.taxonomy > ul.nav > li li a {
+.taxonomy ul.nav > li li a {
     font-size: 12px;
     line-height: 15px;
 }
 
-.taxonomy > .buttons {
+.taxonomy .buttons {
     margin: 10px;
 }
 
-.taxonomy > .buttons > .btn {
+.taxonomy .buttons > .btn {
     margin-right: 2px;
     padding-left: 5px;
     padding-right: 5px;
 }
 
-.taxonomy > .buttons > .btn > .icon {
+.taxonomy .buttons > .btn > .icon {
     font-size: 10px;
 }
 
-.taxonomy > .filters {
+.taxonomy .filters {
     padding: 10px;
 }
 
-.taxonomy > .filters > .filter-tag {
+.taxonomy .filters > .filter-tag {
     background-color: #868686;
     margin-bottom: 5px;
     cursor: pointer;
     position: relative;
 }
 
-.taxonomy > .filters > .filter-tag > .value {
+.taxonomy .filters > .filter-tag > .value {
     padding: 3px 6px;
     display: none;
 }
 
-.taxonomy > .filters > .filter-tag.edit > .value-edit,
-.taxonomy > .filters > .filter-tag.expand > .value-expand,
-.taxonomy > .filters > .filter-tag.edit > .value-full,
-.taxonomy > .filters > .filter-tag > .value-truncate,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag > .value-full {
+.taxonomy .filters > .filter-tag.edit > .value-edit,
+.taxonomy .filters > .filter-tag.expand > .value-expand,
+.taxonomy .filters > .filter-tag.edit > .value-full,
+.taxonomy .filters > .filter-tag > .value-truncate,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag > .value-full {
     display: block;
 }
 
-.taxonomy > .filters > .filter-tag > .value-full,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag > .value-truncate,
-.taxonomy > .filters > .filter-tag.edit > .value-full,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag.edit > .value-full,
-.taxonomy > .filters > .filter-tag.edit > .value-truncate,
-.taxonomy > .filters > .filter-tag.expand > .value-full,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag.expand > .value-full,
-.taxonomy > .filters > .filter-tag.expand > .value-truncate,
-.taxonomy > .filters > .filter-tag.edit > .value-edit a > .btn-remove {
+.taxonomy .filters > .filter-tag > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag > .value-truncate,
+.taxonomy .filters > .filter-tag.edit > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag.edit > .value-full,
+.taxonomy .filters > .filter-tag.edit > .value-truncate,
+.taxonomy .filters > .filter-tag.expand > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag.expand > .value-full,
+.taxonomy .filters > .filter-tag.expand > .value-truncate,
+.taxonomy .filters > .filter-tag.edit > .value-edit a > .btn-remove {
     display: none;
 }
 
-.taxonomy > .filters > .filter-tag:hover,
-.taxonomy > .filters > .filter-tag[aria-expanded="true"] {
+.taxonomy .filters > .filter-tag:hover,
+.taxonomy .filters > .filter-tag[aria-expanded="true"] {
     background-color: #555555;
 }
 
-.taxonomy > .filters > .filter-tag > .value-expand ul,
-.taxonomy > .filters > .filter-tag > .value-expand ul > li {
+.taxonomy .filters > .filter-tag > .value-expand ul,
+.taxonomy .filters > .filter-tag > .value-expand ul > li {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.taxonomy > .filters > .filter-tag > .value-expand ul > li > ul {
+.taxonomy .filters > .filter-tag > .value-expand ul > li > ul {
     padding-left: 10px;
 }
 
-.taxonomy > .filters > .filter-tag > .actions {
+.taxonomy .filters > .filter-tag > .actions {
     position: absolute;
     right: 0;
     top: 0;
     z-index: 1;
 }
 
-.taxonomy > .filters > .filter-tag > .actions > .btn {
+.taxonomy .filters > .filter-tag > .actions > .btn {
     font-size: 7px;
     padding: 5px;
 }
@@ -466,40 +470,44 @@ nav.navigation .second_level > .left-menu-item {
     width: 40%;
 }
 
-.taxonomy > .filters .btn-edit {
+.taxonomy .filters .btn-edit {
     background: #fff;
 }
 
-.sidebar-wrapper.taxonomy-expand-view .taxonomy > ul.nav li[aria-expanded="true"] > ul {
+.sidebar-wrapper.taxonomy-expand-view .taxonomy ul.nav li[aria-expanded="true"] > ul {
     margin-left: 15px;
 }
 
-.taxonomy > .filters > .filter-tag > .value-edit .taxonomy {
-    background: transparent;
-    padding: 0;
-}
-
-.taxonomy > .filters > .filter-tag .btn-edit,
-.taxonomy > .filters > .filter-tag .btn-cancel,
+.taxonomy .filters > .filter-tag .btn-edit,
+.taxonomy .filters > .filter-tag .btn-cancel,
 .sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag.edit .btn-edit {
     display: none;
 }
 
-.taxonomy > .filters > .filter-tag.edit .btn-cancel,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag .btn-edit,
-.taxonomy > .filters > .filter-tag.expand .btn-edit {
+.taxonomy .filters > .filter-tag.edit .btn-cancel,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag .btn-edit,
+.taxonomy .filters > .filter-tag.expand .btn-edit {
     display: inline-block;
 }
 
-.taxonomy > .filters > .filter-tag > .value-edit .taxonomy > ul.nav {
-    padding: 0;
+.taxonomy .filters > .filter-tag > .value-truncate {
+    margin-right: 26px;
 }
 
-.taxonomy > .filters > .filter-tag > .value-edit .taxonomy .buttons {
+.taxonomy .filters > .filter-tag > .value-full {
+    margin-right: 52px;
+}
+
+.taxonomy .filters > .filter-tag > .value-edit ul.nav {
+    padding: 0;
+    margin-top: 30px;
+}
+
+.taxonomy .filters > .filter-tag > .value-edit .buttons {
     padding-bottom: 15px;
 }
 
-.taxonomy > .filters > .filter-tag > .value-edit .taxonomy > ul.nav > li[aria-expanded="true"] {
+.taxonomy .filters > .filter-tag > .value-edit ul.nav > li[aria-expanded="true"] {
     background: #3c3c3c;
 }
 

@@ -252,7 +252,7 @@
                                         </span>
                                     </button>
                                 </span>
-                                <span class="value value-truncate">.. / Governance TG</span>
+                                <span class="value value-truncate" data-placement="top" data-toggle="tooltip"  title="Companies / WSO2 / Employees / Engineering / Governance TG">.. / Governance TG</span>
                                 <span class="value value-full">Companies / WSO2 / Employees / Engineering / Governance TG</span>
                                 <span class="value value-expand">
                                     <ul>
@@ -295,7 +295,7 @@
                                         </span>
                                     </button>
                                 </span>
-                                <span class="value value-truncate">.. / Platform TG</span>
+                                <span class="value value-truncate" data-placement="top" data-toggle="tooltip"  title="Companies / WSO2 / Employees / Engineering / Platform TG">.. / Platform TG</span>
                                 <span class="value value-full">Companies / WSO2 / Employees / Engineering / Platform TG</span>
                                 <span class="value value-expand">
                                     <ul>
@@ -333,7 +333,7 @@
                                                             Engineering
                                                             <button type="button" class="btn btn-primary btn-add" data-placement="top" data-toggle="tooltip" title="Add Filter">
                                                                 <span class="icon fw fw-stack">
-                                                                    <i class="fw fw-minus fw-stack-1x"></i>
+                                                                    <i class="fw fw-add fw-stack-1x"></i>
                                                                     <i class="fw fw-ring fw-stack-2x"></i>
                                                                 </span>
                                                             </button>
@@ -642,8 +642,7 @@
             $(this).closest('li').addClass('active');
         });
         
-        $('body').on('click', '.taxonomy .filter-tag .btn-edit', function(){
-            
+        $('body').on('click', '.taxonomy .filter-tag .btn-edit', function(){            
             var taxonomyEdit = $(this).closest('.filters').siblings('ul.nav').clone();
             
             $(this).closest('.filters').siblings('ul.nav').find('li').each(function(){
@@ -657,7 +656,7 @@
             
             $(this).closest('.filter-tag').removeClass('expand');
             $(this).closest('.filter-tag').addClass('edit');
-            $(this).closest('.filter-tag').append('<span class="value value-edit"><div class="taxonomy">' + taxonomyEdit[0].outerHTML + '</div></span>');
+            $(this).closest('.filter-tag').append('<span class="value value-edit">' + taxonomyEdit[0].outerHTML + '</span>');
             
             $('[data-toggle="tooltip"]').tooltip();
         });
@@ -667,6 +666,10 @@
             $(this).closest('.filter-tag').attr('aria-expanded', 'false');
             $(this).closest('.filter-tag').removeClass('expand');
             $(this).closest('.filter-tag').removeClass('edit');
+        });
+        
+        $('body').on('click', '.taxonomy .filter-tag .value', function(e){
+            $(this).closest('.filter-tag').toggleClass('expand');
         });
 
     </script>
