@@ -669,7 +669,9 @@
         });
         
         $('body').on('click', '.taxonomy .filter-tag .value', function(e){
-            $(this).closest('.filter-tag').toggleClass('expand');
+            if(!$(this).closest('.filter-tag').hasClass('edit')){
+                $(this).closest('.filter-tag').toggleClass('expand');
+            }
         });
 
     </script>
