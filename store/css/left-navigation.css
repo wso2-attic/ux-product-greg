@@ -319,16 +319,28 @@ nav.navigation .second_level > .left-menu-item {
     padding: 3px 30px 3px 7px;
 }
 
+.taxonomy ul.nav > li > a {
+    padding: 3px 35px 3px 7px;
+}
+
 .taxonomy ul.nav li.has-sub > a {
     padding: 3px 45px 3px 7px;
 }
 
+.taxonomy ul.nav > li.has-sub > a {
+    padding: 3px 55px 3px 7px;
+}
+
 .taxonomy ul.nav li > a > .btn {
-    padding: 1px 4px 3px;
+    padding: 0px 3px 2px;
     position: absolute;
     right: 0;
     top: 0;
     font-size: 12px;
+}
+
+.taxonomy ul.nav > li > a > .btn {
+    padding: 5px 8px 7px;
 }
 
 .taxonomy ul.nav li:not(.active) > a > .btn {
@@ -356,11 +368,14 @@ nav.navigation .second_level > .left-menu-item {
     font-family: font-wso2;
     content: "\e685";
     vertical-align: text-top;
-    margin-left: 8px;
     display: inline-block;
     top: 4px;
-    right: 24px;
+    right: 26px;
     position: absolute;
+}
+
+.taxonomy ul.nav > li.has-sub > a:after {
+    right: 35px;
 }
 
 .taxonomy ul.nav li[aria-expanded="true"] > ul {

@@ -328,39 +328,10 @@
                                         <ul>
                                             <li class="has-sub" aria-expanded="true"><a href="#">Employees</a>
                                                 <ul>
-                                                    <li class="has-sub" aria-expanded="true">
-                                                        <a href="#">
-                                                            Engineering
-                                                            <button type="button" class="btn btn-primary btn-add" data-placement="top" data-toggle="tooltip" title="Add Filter">
-                                                                <span class="icon fw fw-stack">
-                                                                    <i class="fw fw-add fw-stack-1x"></i>
-                                                                    <i class="fw fw-ring fw-stack-2x"></i>
-                                                                </span>
-                                                            </button>
-                                                        </a>
+                                                    <li class="has-sub" aria-expanded="true"><a href="#">Engineering</a>
                                                         <ul>
-                                                            <li class="active">
-                                                                <a href="#">
-                                                                    Platform TG
-                                                                    <button type="button" class="btn btn-danger btn-remove" data-placement="top" data-toggle="tooltip" title="Remove Filter">
-                                                                        <span class="icon fw fw-stack">
-                                                                            <i class="fw fw-minus fw-stack-1x"></i>
-                                                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                                                        </span>
-                                                                    </button>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    Governance TG
-                                                                    <button type="button" class="btn btn-primary btn-add" data-placement="top" data-toggle="tooltip" title="Add Filter">
-                                                                        <span class="icon fw fw-stack">
-                                                                            <i class="fw fw-add fw-stack-1x"></i>
-                                                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                                                        </span>
-                                                                    </button>
-                                                                </a>
-                                                            </li>
+                                                            <li class="active"><a href="#">Platform TG</a></li>
+                                                            <li class="active"><a href="#">Governance TG</a></li>
                                                             <li><a href="#">Intergration TG</a></li>
                                                             <li><a href="#">Data TG</a></li>
                                                             <li><a href="#">API TG</a></li>
@@ -671,6 +642,25 @@
         $('body').on('click', '.taxonomy .filter-tag .value', function(e){
             if(!$(this).closest('.filter-tag').hasClass('edit')){
                 $(this).closest('.filter-tag').toggleClass('expand');
+            }
+        });
+        
+        $('.taxonomy ul.nav li a').each(function(){
+            if($(this).closest('li').hasClass('active')){
+                $(this).append('<button type="button" class="btn btn-danger btn-remove" data-placement="top" data-toggle="tooltip" title="Remove Filter">' +
+                    '<span class="icon fw fw-stack">' +
+                        '<i class="fw fw-minus fw-stack-1x"></i>' +
+                        '<i class="fw fw-ring fw-stack-2x"></i>' +
+                    '</span>' +
+                '</button>');
+            }
+            else {
+                $(this).append('<button type="button" class="btn btn-primary btn-add" data-placement="top" data-toggle="tooltip" title="Add Filter">' +
+                    '<span class="icon fw fw-stack">' +
+                        '<i class="fw fw-add fw-stack-1x"></i>' +
+                        '<i class="fw fw-ring fw-stack-2x"></i>' +
+                    '</span>' +
+                '</button>');
             }
         });
 
