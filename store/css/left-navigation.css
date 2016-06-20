@@ -316,7 +316,7 @@ nav.navigation .second_level > .left-menu-item {
 
 .taxonomy > ul.nav > li a {
     display: inline-block;
-    padding: 3px 30px 3px 7px;
+    padding: 3px 45px 3px 7px;
 }
 
 .taxonomy > ul.nav li > a > .btn {
@@ -354,7 +354,8 @@ nav.navigation .second_level > .left-menu-item {
     vertical-align: text-top;
     margin-left: 8px;
     display: inline-block;
-    margin-top: 1px;
+    top: 4px;
+    right: 24px;
     position: absolute;
 }
 
@@ -418,7 +419,8 @@ nav.navigation .second_level > .left-menu-item {
 .taxonomy > .filters > .filter-tag.edit > .value-truncate,
 .taxonomy > .filters > .filter-tag.expand > .value-full,
 .sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag.expand > .value-full,
-.taxonomy > .filters > .filter-tag.expand > .value-truncate {
+.taxonomy > .filters > .filter-tag.expand > .value-truncate,
+.taxonomy > .filters > .filter-tag.edit > .value-edit a > .btn-remove {
     display: none;
 }
 
