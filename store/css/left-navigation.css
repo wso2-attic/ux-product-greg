@@ -272,6 +272,14 @@ nav.navigation .second_level > .left-menu-item {
     padding: 10px;
 }
 
+.btn-expand-taxonomy-toggle {
+    padding: 6px 8px 8px;
+    font-size: 11px;
+    line-height: 1;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
 .taxonomy ul.nav {
     padding: 0 10px;
 }
@@ -296,6 +304,10 @@ nav.navigation .second_level > .left-menu-item {
     margin-top: 5px;
     margin-bottom: 5px;
     display: none;
+}
+
+.taxonomy ul.nav > li .filter-tag .value-expand ul {
+    display: block;
 }
 
 .taxonomy ul.nav > li[aria-expanded="true"] {
@@ -411,62 +423,62 @@ nav.navigation .second_level > .left-menu-item {
     padding: 10px;
 }
 
-.taxonomy .filters > .filter-tag {
+.taxonomy .filter-tag {
     background-color: #868686;
     margin-bottom: 5px;
     cursor: pointer;
     position: relative;
 }
 
-.taxonomy .filters > .filter-tag > .value {
+.taxonomy .filter-tag > .value {
     padding: 3px 6px;
     display: none;
 }
 
-.taxonomy .filters > .filter-tag.edit > .value-edit,
-.taxonomy .filters > .filter-tag.expand > .value-expand,
-.taxonomy .filters > .filter-tag.edit > .value-full,
-.taxonomy .filters > .filter-tag > .value-truncate,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag > .value-full {
+.taxonomy .filter-tag.edit > .value-edit,
+.taxonomy .filter-tag.expand > .value-expand,
+.taxonomy .filter-tag.edit > .value-full,
+.taxonomy .filter-tag > .value-truncate,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filter-tag > .value-full {
     display: block;
 }
 
-.taxonomy .filters > .filter-tag > .value-full,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag > .value-truncate,
-.taxonomy .filters > .filter-tag.edit > .value-full,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag.edit > .value-full,
-.taxonomy .filters > .filter-tag.edit > .value-truncate,
-.taxonomy .filters > .filter-tag.expand > .value-full,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag.expand > .value-full,
-.taxonomy .filters > .filter-tag.expand > .value-truncate,
-.taxonomy .filters > .filter-tag.edit > .value-edit a > .btn-remove {
+.taxonomy .filter-tag > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filter-tag > .value-truncate,
+.taxonomy .filter-tag.edit > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filter-tag.edit > .value-full,
+.taxonomy .filter-tag.edit > .value-truncate,
+.taxonomy .filter-tag.expand > .value-full,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filter-tag.expand > .value-full,
+.taxonomy .filter-tag.expand > .value-truncate,
+.taxonomy .filter-tag.edit > .value-edit a > .btn-remove {
     display: none;
 }
 
-.taxonomy .filters > .filter-tag:hover,
-.taxonomy .filters > .filter-tag[aria-expanded="true"] {
+.taxonomy .filter-tag:hover,
+.taxonomy .filter-tag[aria-expanded="true"] {
     background-color: #555555;
 }
 
-.taxonomy .filters > .filter-tag > .value-expand ul,
-.taxonomy .filters > .filter-tag > .value-expand ul > li {
+.taxonomy .filter-tag > .value-expand ul,
+.taxonomy .filter-tag > .value-expand ul > li {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.taxonomy .filters > .filter-tag > .value-expand ul > li > ul {
+.taxonomy .filter-tag > .value-expand ul > li > ul {
     padding-left: 10px;
 }
 
-.taxonomy .filters > .filter-tag > .actions {
+.taxonomy .filter-tag > .actions {
     position: absolute;
     right: 0;
     top: 0;
     z-index: 1;
 }
 
-.taxonomy .filters > .filter-tag > .actions > .btn {
+.taxonomy .filter-tag > .actions > .btn {
     font-size: 7px;
     padding: 5px;
 }
@@ -485,7 +497,7 @@ nav.navigation .second_level > .left-menu-item {
     width: 40%;
 }
 
-.taxonomy .filters .btn-edit {
+.taxonomy .filter-tag .btn-edit {
     background: #fff;
 }
 
@@ -493,36 +505,36 @@ nav.navigation .second_level > .left-menu-item {
     margin-left: 15px;
 }
 
-.taxonomy .filters > .filter-tag .btn-edit,
-.taxonomy .filters > .filter-tag .btn-cancel,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy > .filters > .filter-tag.edit .btn-edit {
+.taxonomy .filter-tag .btn-edit,
+.taxonomy .filter-tag .btn-cancel,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filter-tag.edit .btn-edit {
     display: none;
 }
 
-.taxonomy .filters > .filter-tag.edit .btn-cancel,
-.sidebar-wrapper.taxonomy-expand-view .taxonomy .filters > .filter-tag .btn-edit,
-.taxonomy .filters > .filter-tag.expand .btn-edit {
+.taxonomy .filter-tag.edit .btn-cancel,
+.sidebar-wrapper.taxonomy-expand-view .taxonomy .filter-tag .btn-edit,
+.taxonomy .filter-tag.expand .btn-edit {
     display: inline-block;
 }
 
-.taxonomy .filters > .filter-tag > .value-truncate {
+.taxonomy .filter-tag > .value-truncate {
     margin-right: 26px;
 }
 
-.taxonomy .filters > .filter-tag > .value-full {
+.taxonomy .filter-tag > .value-full {
     margin-right: 52px;
 }
 
-.taxonomy .filters > .filter-tag > .value-edit ul.nav {
+.taxonomy .filter-tag > .value-edit ul.nav {
     padding: 0;
     margin-top: 30px;
 }
 
-.taxonomy .filters > .filter-tag > .value-edit .buttons {
+.taxonomy .filter-tag > .value-edit .buttons {
     padding-bottom: 15px;
 }
 
-.taxonomy .filters > .filter-tag > .value-edit ul.nav > li[aria-expanded="true"] {
+.taxonomy .filter-tag > .value-edit ul.nav > li[aria-expanded="true"] {
     background: #3c3c3c;
 }
 
