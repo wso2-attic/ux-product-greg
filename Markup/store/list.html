@@ -30,7 +30,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/font-wso2.css" rel="stylesheet">
+<!--    <link href="css/font-wso2.css" rel="stylesheet">-->
+    <link href="libs/font-wso2_1.1.0/css/font-wso2.css" rel="stylesheet">
     <link href="libs/nanoscroller_0.8.7/nanoscroller.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/left-navigation.css"/>
     <link rel="stylesheet" type="text/css" href="css/typeahead.css"/>
@@ -191,7 +192,7 @@
                 
                 <nav class="navigation">
                     <a href='/store/pages/top-assets' id="all-assets" class=" active home top-item ">
-                        <span class="icon"><i class="fw fw-store"></i></span> <span class="left-menu-item">ALL</span>
+                        <span class="icon"><i class="fw fw-success"></i></span> <span class="left-menu-item">ALL</span>
                     </a>
                     <a href='/store/assets/policy/list' id="policy" class="yellow all-item">
                         <span class="icon"><i class="fw fw-policy"></i></span> <span class="left-menu-item">Policies</span>
@@ -224,105 +225,107 @@
                 
                 <div id="taxonomy-section">
                 
-                    <button type="button" class="btn btn-primary pull-right" id="maximize-taxonomy" data-toggle="tooltip" data-placement="left" title="Expand Section">
-                        <i class="fw fw-right"></i>
+                    <button type="button" class="btn btn-secondary pull-right btn-expand-taxonomy-toggle" id="maximize-taxonomy" data-toggle="tooltip" data-placement="left" title="Expand Section">
+                        <i class="fw fw-expand"></i>
                     </button>
                     
                     <nav class="taxonomy">
 
                         <h1>Filter by</h1>
 
-                        <div class="filters">
-                            <div class="filter-tag">
-                                <span class="actions">
-                                    <button type="button" class="btn btn-secondary btn-cancel" data-placement="left" data-toggle="tooltip" title="Cancel">
-                                        <span class="icon fw fw-stack">
-                                            <i class="fw fw-cancel fw-stack-1x"></i>
-                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                        </span>
-                                    </button><button type="button" class="btn btn-default btn-edit" data-placement="left" data-toggle="tooltip" title="Edit">
-                                        <span class="icon fw fw-stack">
-                                            <i class="fw fw-edit fw-stack-1x"></i>
-                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                        </span>
-                                    </button><button type="button" class="btn btn-danger btn-remove" data-placement="left" data-toggle="tooltip" title="Remove">
-                                        <span class="icon fw fw-stack">
-                                            <i class="fw fw-minus fw-stack-1x"></i>
-                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                        </span>
-                                    </button>
-                                </span>
-                                <span class="value value-truncate" data-placement="top" data-toggle="tooltip"  title="Companies / WSO2 / Employees / Engineering / Governance TG">.. / Governance TG</span>
-                                <span class="value value-full">Companies / WSO2 / Employees / Engineering / Governance TG</span>
-                                <span class="value value-expand">
-                                    <ul>
-                                        <li>Companies
-                                            <ul>
-                                                <li>WSO2
-                                                    <ul>
-                                                        <li>Employees
-                                                            <ul>
-                                                                <li>Engineering
-                                                                    <ul>
-                                                                        <li>Platform TG</li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </span>
-                            </div>
-                            <div class="filter-tag expand" aria-expanded="true">
-                                <span class="actions">
-                                    <button type="button" class="btn btn-secondary btn-cancel" data-placement="left" data-toggle="tooltip" title="Cancel">
-                                        <span class="icon fw fw-stack">
-                                            <i class="fw fw-cancel fw-stack-1x"></i>
-                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                        </span>
-                                    </button><button type="button" class="btn btn-default btn-edit" data-placement="left" data-toggle="tooltip" title="Edit">
-                                        <span class="icon fw fw-stack">
-                                            <i class="fw fw-edit fw-stack-1x"></i>
-                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                        </span>
-                                    </button><button type="button" class="btn btn-danger btn-remove" data-placement="left" data-toggle="tooltip" title="Remove">
-                                        <span class="icon fw fw-stack">
-                                            <i class="fw fw-minus fw-stack-1x"></i>
-                                            <i class="fw fw-ring fw-stack-2x"></i>
-                                        </span>
-                                    </button>
-                                </span>
-                                <span class="value value-truncate" data-placement="top" data-toggle="tooltip"  title="Companies / WSO2 / Employees / Engineering / Platform TG">.. / Platform TG</span>
-                                <span class="value value-full">Companies / WSO2 / Employees / Engineering / Platform TG</span>
-                                <span class="value value-expand">
-                                    <ul>
-                                        <li>Companies
-                                            <ul>
-                                                <li>WSO2
-                                                    <ul>
-                                                        <li>Employees
-                                                            <ul>
-                                                                <li>Engineering
-                                                                    <ul>
-                                                                        <li>Platform TG</li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </span>
-                            </div>
-                        </div>
-
                         <ul class="nav nav-stacked">
-                            <li class="has-sub" aria-expanded="true"><a href="#">Companies</a>
+                            <li class="has-sub" aria-expanded="true">
+                                
+                                <div class="filter-tag">
+                                    <span class="actions">
+                                        <button type="button" class="btn btn-secondary btn-cancel" data-placement="left" data-toggle="tooltip" title="Cancel">
+                                            <span class="icon fw fw-stack">
+                                                <i class="fw fw-cancel fw-stack-1x"></i>
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                            </span>
+                                        </button><button type="button" class="btn btn-default btn-edit" data-placement="left" data-toggle="tooltip" title="Edit">
+                                            <span class="icon fw fw-stack">
+                                                <i class="fw fw-edit fw-stack-1x"></i>
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                            </span>
+                                        </button><button type="button" class="btn btn-danger btn-remove" data-placement="left" data-toggle="tooltip" title="Remove">
+                                            <span class="icon fw fw-stack">
+                                                <i class="fw fw-minus fw-stack-1x"></i>
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                            </span>
+                                        </button>
+                                    </span>
+                                    <span class="value value-truncate" data-placement="top" data-toggle="tooltip"  title="Companies / WSO2 / Employees / Engineering / Platform TG">.. / Platform TG</span>
+                                    <span class="value value-full">Companies / WSO2 / Employees / Engineering / Platform TG</span>
+                                    <span class="value value-expand">
+                                        <ul>
+                                            <li>Companies
+                                                <ul>
+                                                    <li>WSO2
+                                                        <ul>
+                                                            <li>Employees
+                                                                <ul>
+                                                                    <li>Engineering
+                                                                        <ul>
+                                                                            <li>Platform TG</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </div>
+                                
+                                <div class="filter-tag expand" aria-expanded="true">
+                                    <span class="actions">
+                                        <button type="button" class="btn btn-secondary btn-cancel" data-placement="left" data-toggle="tooltip" title="Cancel">
+                                            <span class="icon fw fw-stack">
+                                                <i class="fw fw-cancel fw-stack-1x"></i>
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                            </span>
+                                        </button><button type="button" class="btn btn-default btn-edit" data-placement="left" data-toggle="tooltip" title="Edit">
+                                            <span class="icon fw fw-stack">
+                                                <i class="fw fw-edit fw-stack-1x"></i>
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                            </span>
+                                        </button><button type="button" class="btn btn-danger btn-remove" data-placement="left" data-toggle="tooltip" title="Remove">
+                                            <span class="icon fw fw-stack">
+                                                <i class="fw fw-minus fw-stack-1x"></i>
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                            </span>
+                                        </button>
+                                    </span>
+                                    <span class="value value-truncate" data-placement="top" data-toggle="tooltip"  title="Companies / WSO2 / Employees / Engineering / Governance TG">.. / Governance TG</span>
+                                    <span class="value value-full">Companies / WSO2 / Employees / Engineering / Governance TG</span>
+                                    <span class="value value-expand">
+                                        <ul>
+                                            <li>Companies
+                                                <ul>
+                                                    <li>WSO2
+                                                        <ul>
+                                                            <li>Employees
+                                                                <ul>
+                                                                    <li>Engineering
+                                                                        <ul>
+                                                                            <li>Governance TG</li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </div>
+                                
+                                <a href="#">Companies</a>
+                                
                                 <ul>
                                     <li class="has-sub" aria-expanded="true"><a href="#">WSO2</a>
                                         <ul>
@@ -367,7 +370,7 @@
                         <a data-toggle="collapse" href="#refineByType" aria-expanded="true" aria-controls="collapseExample">
                             <span class="icon fw fw-stack">
                                 <i class="fw fw-right fw-stack-1x"></i>
-                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-circle-outline fw-stack-2x"></i>
                             </span> Type
                         </a>
                         <div class="collapse in" id="refineByType" aria-expanded="true">
@@ -407,7 +410,7 @@
                         <a data-toggle="collapse" href="#refineByProject" aria-expanded="false" aria-controls="collapseExample">
                             <span class="icon fw fw-stack">
                                 <i class="fw fw-right fw-stack-1x"></i>
-                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-circle-outline fw-stack-2x"></i>
                             </span> Project
                         </a>
                         <div class="collapse" id="refineByProject">
@@ -447,7 +450,7 @@
                         <a data-toggle="collapse" href="#refineByLocation" aria-expanded="false" aria-controls="collapseExample">
                             <span class="icon fw fw-stack">
                                 <i class="fw fw-right fw-stack-1x"></i>
-                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-circle-outline fw-stack-2x"></i>
                             </span> Location
                         </a>
                         <div class="collapse" id="refineByLocation">
@@ -479,8 +482,8 @@
         <div class="container-fluid">
             <div id="taxonomy-expand-view" class="taxonomy-expand-view sidebar-wrapper sidebar-nav toggled nano" data-offset-bottom="40">
                 <div class="nano-content">
-                    <button type="button" class="btn btn-primary pull-right" id="contract-taxonomy" data-toggle="tooltip" data-placement="left" title="Contract Section">
-                        <i class="fw fw-left"></i>
+                    <button type="button" class="btn btn-secondary pull-right btn-expand-taxonomy-toggle" id="contract-taxonomy" data-toggle="tooltip" data-placement="left" title="Contract Section">
+                        <i class="fw fw-contract"></i>
                     </button>
 
                     <nav class="taxonomy"><!-- Dynamic Content --></nav>
@@ -650,7 +653,7 @@
                 $(this).append('<button type="button" class="btn btn-danger btn-remove" data-placement="top" data-toggle="tooltip" title="Remove Filter">' +
                     '<span class="icon fw fw-stack">' +
                         '<i class="fw fw-minus fw-stack-1x"></i>' +
-                        '<i class="fw fw-ring fw-stack-2x"></i>' +
+                        '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '</span>' +
                 '</button>');
             }
@@ -658,7 +661,7 @@
                 $(this).append('<button type="button" class="btn btn-primary btn-add" data-placement="top" data-toggle="tooltip" title="Add Filter">' +
                     '<span class="icon fw fw-stack">' +
                         '<i class="fw fw-add fw-stack-1x"></i>' +
-                        '<i class="fw fw-ring fw-stack-2x"></i>' +
+                        '<i class="fw fw-circle-outline fw-stack-2x"></i>' +
                     '</span>' +
                 '</button>');
             }
