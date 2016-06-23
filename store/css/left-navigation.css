@@ -306,7 +306,8 @@ nav.navigation .second_level > .left-menu-item {
     display: none;
 }
 
-.taxonomy ul.nav > li .filter-tag .value-expand ul {
+.taxonomy ul.nav > li .filter-tag .value-expand ul,
+.taxonomy ul.nav > li .filter-tag .value-edit ul {
     display: block;
 }
 
