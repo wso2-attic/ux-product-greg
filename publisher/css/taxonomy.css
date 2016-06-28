@@ -1,6 +1,5 @@
 .taxonomy-select {
-    height: 200px;
-    overflow: visible;
+    overflow: hidden;
     border-top: 2px solid #eee;
     border-bottom: 2px solid #eee;
     border-right: 1px solid #eee;
@@ -8,8 +7,16 @@
     margin: 0;
 }
 
+.taxonomy-select,
+.taxonomy-select > .taxonomy-select-window {
+    height: 300px;
+}
+
 .taxonomy-select > .taxonomy-select-window {
     padding: 15px;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    overflow-y: auto;
 }
 
 .taxonomy-select > .taxonomy-select-window > ul,
@@ -32,18 +39,15 @@
 }
 
 .taxonomy-select > .taxonomy-select-window > ul li > a > .icon {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .taxonomy-select > .taxonomy-select-window > ul li > a:hover {
     background: #eee;
 }
 
-.taxonomy-select > .taxonomy-select-window {
-    border-right: 1px solid #eee;
-    border-left: 1px solid #eee;
-    height: 200px;
-    overflow-y: auto;
+.taxonomy-select > .taxonomy-select-window > ul li.back {
+    margin-bottom: 10px;
 }
 
 .taxonomy-breadcrumb {
