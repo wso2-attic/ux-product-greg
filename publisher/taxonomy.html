@@ -358,15 +358,10 @@
                       $(columnSelector + ':lt('+ leftOverflowColumns +')').hide();
                   }
                   
-//                  if( ($(columnSelector + ':visible').length < columnsCount) &&
-//                          (activeColumn.data(windowColumnId) > columnsCount) ){
-//
-//                          var firstVisibleColumn = $(columnSelector + ':visible:first').data(windowColumnId);
-//                           var tt = ((firstVisibleColumn+1) - columnsCount);
-//
-//                          $(columnSelector + ':lt('+ firstVisibleColumn +'):gt('+ tt +')').fadeIn();
-//
-//                      }
+                  if($(columnSelector + ':visible').length < columnsCount){
+                      var columnsToFill = (columnsCount - $(columnSelector + ':visible').length); 
+                      $(columnSelector + ':visible:first').prev(columnsToFill).fadeIn();
+                  }
                   
                   this.showBackButton();
               }
