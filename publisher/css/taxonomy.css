@@ -17,6 +17,11 @@
     border-right: 1px solid #eee;
     border-left: 1px solid #eee;
     overflow-y: auto;
+    display: none;
+}
+
+.taxonomy-select > .taxonomy-select-window:first-child {
+    display: block;
 }
 
 .taxonomy-select > .taxonomy-select-window > ul,
@@ -24,6 +29,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.taxonomy-select > .taxonomy-select-window > ul li.back {
+    display: none;
 }
 
 .taxonomy-select > .taxonomy-select-window > ul li > a {
